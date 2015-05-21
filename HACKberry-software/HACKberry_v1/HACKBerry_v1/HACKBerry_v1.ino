@@ -1,15 +1,15 @@
 #include <Servo.h>
 
 //Micro
-boolean calibPin0 =  A6;      // the number of the calibration pin for MAX
-boolean calibPin1 =  A5;      // the number of the calibration pin for MIN
-boolean thumbPin =  A4;      // 
-boolean fingerPin =  A3;      //
-const int analogInPin0 = A0;
+boolean calibPin0 =  A6; //set the MAX value of the sensor input
+boolean calibPin1 =  A5; //set the MIN value of the sensor input
+boolean thumbPin =  A4; //change the thumb position among three preset values
+boolean fingerPin =  A3; //lock or unlock the position of middle finger, ring finger and pinky
+const int analogInPin0 = A0; //sensor input
 
-Servo myservo0;
-Servo myservo1;
-Servo myservo2;
+Servo myservo0; //controls index finger
+Servo myservo1; //controls middle finger, ring finger and pinky
+Servo myservo2; //controls thumb
 
 float target = 0;
 int thumbPinState = 1;
@@ -24,27 +24,22 @@ int swCount1 = 0;
 int swCount2 = 0;
 int swCount3 = 0;
 
-int sensorValue0 = 0;        // value read from the sensor
-int sensorValue1 = 0;        // value read from the sensor
-
+int sensorValue = 0; // value read from the sensor
 int sensorMax = 700;
-int sensorMin = 0;
+int sensorMin = 400;
 int threshold = 0;
 
 //speed settings
-boolean inputState = HIGH;
-boolean prevInputState = HIGH;
-int speedMax = 5;
+int speedMax = 7;
 int speedMin = 0;
-int speedInverse = -1;
+int speedReverse = -3;
 int speed = 0;
 
-int positionMax = 100;
+int positionMax = 150;
 int positionMin = 0;
-int position =50;
-int prePosition = 50;
+int position =0;
+int prePosition = 0;
 
-int thumbGrasp = 45;  
 int thumbPinch = 58;  
 int thumbOpen = 153;
 
@@ -62,10 +57,10 @@ int middlePos = 90;
 void setup() {
   Serial.begin(9600); 
 
-  pinMode(calibPin0, INPUT);  // MAX
+  pinMode(calibPin0, INPUT); //MAX
   digitalWrite(calibPin0, HIGH);
   
-  pinMode(calibPin1, INPUT);  // MIN
+  pinMode(calibPin1, INPUT); //MIN
   digitalWrite(calibPin1, HIGH);
   
   pinMode(thumbPin, INPUT);
@@ -80,8 +75,8 @@ void setup() {
 }
 
 void loop() { 
-  sensorValue0 = ReadSens_and_Condition();
-  delay(10);
+  sensorValue = ReadSens_and_Condition();
+  delay(25);
     
   if(digitalRead(calibPin0) == LOW){//A6
      swCount0 += 1;
@@ -90,7 +85,7 @@ void loop() {
     swCount0 = 0;
   }
   
-  if(swCount0 == 20){
+  if(swCount0 == 10){
     swCount0 = 0;
     sensorMax = ReadSens_and_Condition();    
   }
@@ -102,7 +97,7 @@ void loop() {
     swCount1 = 0;
   }
   
-  if(swCount1 == 20){
+  if(swCount1 == 10){
     swCount1 = 0;
     sensorMin = ReadSens_and_Condition() + threshold;
   }
@@ -117,7 +112,7 @@ void loop() {
   if(swCount2 == 10){
     swCount2 = 0;
     thumbPinState ++;
-    if(thumbPinState > 2){
+    if(thumbPinState > 1){
       thumbPinState = 0;    
     }
     while(digitalRead(thumbPin) == LOW){delay(1);}   
@@ -142,7 +137,7 @@ void loop() {
   Serial.print(",Max=");
   Serial.print(sensorMax);
   Serial.print(",Value=");
-  Serial.print(sensorValue0);
+  Serial.print(sensorValue);
   Serial.print(",thumb=");
   Serial.print(thumbPinState);
   Serial.print(",finger=");
@@ -155,45 +150,39 @@ void loop() {
   
 
 //calculate speed
-  inputState = HIGH;
-  if(sensorValue0 < (sensorMin+(sensorMax-sensorMin)/8)){
-    speed = speedInverse;
-    if(inputState == LOW) inputState = HIGH;
+  if(sensorValue < (sensorMin+(sensorMax-sensorMin)/8)){
+    speed = speedReverse;
   }
-  else if(sensorValue0 < (sensorMin+(sensorMax-sensorMin)/4)){
+  else if(sensorValue < (sensorMin+(sensorMax-sensorMin)/4)){
     speed = 0;
   }
   else{
-    speed = map(sensorValue0, sensorMin, sensorMax, speedMin, speedMax);
-      if(inputState == HIGH) inputState = LOW;
+    speed = map(sensorValue, sensorMin, sensorMax, speedMin, speedMax);
   }
-  prevInputState = inputState;
 
 //calculate position
   position = prePosition + speed;
   if(position < positionMin) position = positionMin;
   if(position > positionMax) position = positionMax;
   prePosition = position;
-
  //motor
   indexPos=map(position,positionMin,positionMax,indexMin, indexMax);
-  middlePos=map(position,positionMin,positionMax,middleMin, middleMax);
-
+  
   myservo0.write(indexPos);
 
   if(fingerPinState == HIGH){
-  myservo1.write(middlePos);
+     middlePos=map(position,positionMin,positionMax,middleMin, middleMax);
+     myservo1.write(middlePos);
   }
 
   switch(thumbPinState){
-    case 0://grasp
-      myservo2.write(thumbGrasp);
-      break;
-    case 1://pinch
+    case 0://pinch
       myservo2.write(thumbPinch);
       break;
-    case 2://open
+    case 1://open
       myservo2.write(thumbOpen);
+      break;
+    default:
       break;
   }
 }
