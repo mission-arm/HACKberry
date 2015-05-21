@@ -1,8 +1,6 @@
-#include <avr/interrupt.h>  // 外部割り込みライブラリのインクルード
-#include <avr/sleep.h>
 #include <Servo.h>
 
-////Micro
+//Micro
 boolean calibPin0 =  A6;      // the number of the calibration pin for MAX
 boolean calibPin1 =  A5;      // the number of the calibration pin for MIN
 boolean thumbPin =  A4;      // 
@@ -21,17 +19,17 @@ int count = 0;
 int mode = 0;
 int val = 0;
 
-int swCount0 = 0;  //チャタリング防止用のカウンタ
-int swCount1 = 0;  //チャタリング防止用のカウンタ
-int swCount2 = 0;  //チャタリング防止用のカウンタ
-int swCount3 = 0;  //チャタリング防止用のカウンタ
+int swCount0 = 0;
+int swCount1 = 0;
+int swCount2 = 0;
+int swCount3 = 0;
 
 int sensorValue0 = 0;        // value read from the sensor
 int sensorValue1 = 0;        // value read from the sensor
 
 int sensorMax = 700;
 int sensorMin = 0;
-int threshold = 0; //ミニマム側の底上げ
+int threshold = 0;
 
 //speed settings
 boolean inputState = HIGH;
@@ -53,9 +51,8 @@ int thumbOpen = 153;
 
 int indexMin = 180;//extend
 int indexMax = 0;//flex
-/*DM1500可動域 150-*/
-int middleMin = 125
-;//extend 
+
+int middleMin = 120;//extend 
 int middleMax = 40;//flex
 
 int thumbPos = 90;
@@ -63,19 +60,19 @@ int indexPos = 90;
 int middlePos = 90;
 
 void setup() {
-  Serial.begin(9600);      // モニタ用にメッセージを出力
+  Serial.begin(9600); 
 
   pinMode(calibPin0, INPUT);  // MAX
-  digitalWrite(calibPin0, HIGH);//プルアップ
+  digitalWrite(calibPin0, HIGH);
   
   pinMode(calibPin1, INPUT);  // MIN
-  digitalWrite(calibPin1, HIGH);//プルアップ
+  digitalWrite(calibPin1, HIGH);
   
-  pinMode(thumbPin, INPUT);  // MIN
-  digitalWrite(thumbPin,HIGH);//プルアップ
+  pinMode(thumbPin, INPUT);
+  digitalWrite(thumbPin,HIGH);
 
-  pinMode(fingerPin, INPUT);  // MIN
-  digitalWrite(fingerPin,HIGH);//プルアップ
+  pinMode(fingerPin, INPUT);
+  digitalWrite(fingerPin,HIGH);
 
   myservo0.attach(3);//index  
   myservo1.attach(5);//middle
@@ -86,8 +83,7 @@ void loop() {
   sensorValue0 = ReadSens_and_Condition();
   delay(10);
     
-  //センサ読み取り値のキャリブレーション 
-  if(digitalRead(calibPin0) == LOW){//A6が押された場合
+  if(digitalRead(calibPin0) == LOW){//A6
      swCount0 += 1;
   }
   else{
@@ -99,7 +95,7 @@ void loop() {
     sensorMax = ReadSens_and_Condition();    
   }
   
-  if(digitalRead(calibPin1) == LOW){//A5が押された場合
+  if(digitalRead(calibPin1) == LOW){//A5
      swCount1 += 1;
   }
   else{
@@ -108,10 +104,10 @@ void loop() {
   
   if(swCount1 == 20){
     swCount1 = 0;
-    sensorMin = ReadSens_and_Condition() + threshold;//脱力時に完全に静止させるため
+    sensorMin = ReadSens_and_Condition() + threshold;
   }
 
-  if(digitalRead(thumbPin) == LOW){//A4が押された場合
+  if(digitalRead(thumbPin) == LOW){//A4
      swCount2 += 1;
   }
   else{
@@ -127,7 +123,7 @@ void loop() {
     while(digitalRead(thumbPin) == LOW){delay(1);}   
   }
 
-  if(digitalRead(fingerPin) == LOW){//A3が押された場合
+  if(digitalRead(fingerPin) == LOW){//A3
      swCount3 += 1;
   }
   else{
@@ -140,7 +136,7 @@ void loop() {
   }
 
 
-//ステータス
+//status
   Serial.print("Min=");
   Serial.print(sensorMin);
   Serial.print(",Max=");
@@ -173,13 +169,13 @@ void loop() {
   }
   prevInputState = inputState;
 
-  //calculate position
+//calculate position
   position = prePosition + speed;
   if(position < positionMin) position = positionMin;
   if(position > positionMax) position = positionMax;
   prePosition = position;
 
-  //モーターへの命令
+ //motor
   indexPos=map(position,positionMin,positionMax,indexMin, indexMax);
   middlePos=map(position,positionMin,positionMax,middleMin, middleMax);
 
@@ -188,7 +184,6 @@ void loop() {
   if(fingerPinState == HIGH){
   myservo1.write(middlePos);
   }
-
 
   switch(thumbPinState){
     case 0://grasp
