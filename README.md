@@ -30,7 +30,7 @@ The data for the hardwares of the HACKberry are released under the following lic
 
 |Data|Licenses|
 |:-|:-:|  
-|3.1.3D data for  shaping parts used in the Artificial Arms|Creative Commons License BY-SA 4.0 International|
+|3.1.3D data for  shaping parts used in the Artificial Arms|Creative Commons License BY-SA 4.0 International|  
 |3.2.Hand substrates data (mean datas for substrates connecting Arduinos, motors, sensors and batteries)|Creative Commons License BY-SA 4.0 International|
 |3.3.Sensor substrates data ( mean datas for substrates used to build reflection type photosensors that detect ridges in muscle tissue)|Creative Commons License BY-SA 4.0 International|
 |3.4.Battery substrates data (mean datas for substrates built in battery boxes)|Creative Commons License BY-SA 4.0 International|
