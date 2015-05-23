@@ -4,8 +4,7 @@ Hackberries, which are a species of trees included in the elm family, grow many 
 Our goal is to develop an artificial arm that would become the platform upon which developers and artificial arm users from all over the world are able to build as they wish.  
 The name represents our vision to “hack” at problems, grow branches of joy that reach out to users and enable their ideas and efforts to bear fruit (“berries”).
 
-# LICENSE
-HACKberry Open Source Project Policy
+# HACKberry Open Source Project Policy
 
 This policy (“Policy”) of “HACKberry Open Source Project” ( “Project”) sets forth the scope and the terms and conditions of the provision of the source codes and data etc. and the licensing the rights to work the inventions regarding to the “HACKberry” by Exiii Inc. (“Company”).
 
@@ -81,15 +80,7 @@ Prescribed on May 25th, 2015
 exiii Inc.  
 
 
-
-# HACKberry
-HACKberry is a practical model for daily use created through the cooperation of actual users.  
-Hackberries, which are a species of trees included in the elm family, grow many branches.  
-Our goal is to develop an artificial arm that would become the platform upon which developers and artificial arm users from all over the world are able to build as they wish.  
-The name represents our vision to “hack” at problems, grow branches of joy that reach out to users and enable their ideas and efforts to bear fruit (“berries”).
-
-# LICENSE
-HACKberry Open Source Project Policy
+# HACKberry Open Source Project Policy(Japanese)
 
 イクシー株式会社（以下「当社」といいます。）は、本ポリシーにおいて、「HACKberry」に関するソースコードおよびデータ等の公開（以下「本プロジェクト」といいます。）の内容およびその利用条件等について定めます。
 
