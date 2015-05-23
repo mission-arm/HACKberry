@@ -30,6 +30,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:yamaura
 LIBS:arduino
+LIBS:HandBoard_v1-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -216,8 +217,6 @@ Wire Wire Line
 Wire Wire Line
 	6800 4550 7650 4550
 Wire Wire Line
-	3550 4500 4750 4500
-Wire Wire Line
 	3850 5000 3850 5500
 Wire Wire Line
 	3850 5500 5000 5500
@@ -244,12 +243,6 @@ Wire Wire Line
 	4350 5000 3850 5000
 Connection ~ 3850 5300
 Connection ~ 4350 4600
-Wire Wire Line
-	3550 4400 4500 4400
-Wire Wire Line
-	4500 4400 4500 4700
-Wire Wire Line
-	4500 4700 4750 4700
 Wire Wire Line
 	2900 3200 2650 3200
 Wire Wire Line
@@ -309,4 +302,16 @@ Wire Wire Line
 Wire Wire Line
 	3550 5200 3800 5200
 NoConn ~ 3350 5200
+Wire Wire Line
+	3550 4500 4450 4500
+Wire Wire Line
+	4450 4500 4450 4700
+Wire Wire Line
+	4450 4700 4750 4700
+Wire Wire Line
+	3550 4400 4550 4400
+Wire Wire Line
+	4550 4400 4550 4500
+Wire Wire Line
+	4550 4500 4750 4500
 $EndSCHEMATC
