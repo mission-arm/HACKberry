@@ -97,14 +97,14 @@ exiii Inc.
 HACKberryに関するソフトウェアのソースコードは、以下のライセンスに基づき公開されます。
 
 |ソースコード|ライセンス|  
-|:-:|:-:|  
+|:--|:-:|  
 |2.1.Arduinoスケッチ（義手に内蔵したArduino Microに書き込むためのソースコードを意味します。）|CC0 1.0 Universal|
 
 ##3. ハードウェアに関するデータ
 HACKberryに関するハードウェアに関する各データは、以下の各ライセンスまたは条件に基づき公開されます。  
 
 |データ|ライセンス|  
-|:-:|:-:|  
+|:--|:-:|  
 |3.1.3Dデータ（義手に使う各部品の形状データを意味します。）|Creative Commons License BY-SA 4.0 International|
 |3.2.ハンド基板データ（マイコン、モーター、センサおよび電池を繋ぐための回路基板を意味します。）|Creative Commons License BY-SA 4.0 International|
 |3.3.センサ基板データ（筋肉の隆起を検出するための反射型光センサ（フォトリフレクタ）を取り付けるための回路基板を意味します。）|Creative Commons License BY-SA 4.0 International|
