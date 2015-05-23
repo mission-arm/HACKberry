@@ -29,14 +29,14 @@ The source codes for the software of the HACKberry are released under the follow
 ##3. Data for Hardware
 The data for the hardwares of the HACKberry are released under the following licenses.  
 
-|source codes|licenses|  
+|Data|licenses|  
 |:-:|:-:|  
-|2.1.Arduino Sketch (means the source code for Arduino Micro built in the HACKberry artificial arms (“Artificial Arms”) )|CC0 1.0 Universal|
+|3.1.3D data for  shaping parts used in the Artificial Arms|Creative Commons License BY-SA 4.0 International|
 
 
 |Data|Licenses|
 |:-|:-:|  
-|3.1.3D data for  shaping parts used in the Artificial Arms|Creative Commons License BY-SA 4.0 International|  
+||  
 |3.2.Hand substrates data (mean datas for substrates connecting microcontroller boards, motors, sensors and batteries)|Creative Commons License BY-SA 4.0 International|
 |3.3.Sensor substrates data ( mean datas for substrates used to build reflection type photosensors that detect ridges in muscle tissue)|Creative Commons License BY-SA 4.0 International|
 |3.4.Battery substrates data (mean datas for substrates built in battery boxes)|Creative Commons License BY-SA 4.0 International|
