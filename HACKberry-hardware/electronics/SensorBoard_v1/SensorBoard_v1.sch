@@ -28,7 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:yamaura
 LIBS:SensorBoard_v1-cache
 EELAYER 25 0
 EELAYER END
@@ -119,10 +118,10 @@ Wire Wire Line
 Wire Wire Line
 	5950 4650 7200 4650
 Connection ~ 7200 4500
-Connection ~ 7150 3900
-Connection ~ 7200 4650
 Wire Wire Line
 	7200 4650 7200 3350
 Wire Wire Line
 	7150 3900 7150 4300
+Connection ~ 6000 3900
+Connection ~ 6000 4000
 $EndSCHEMATC
