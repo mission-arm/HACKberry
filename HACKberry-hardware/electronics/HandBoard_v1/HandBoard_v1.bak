@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:yamaura
 LIBS:arduino
 LIBS:HandBoard_v1-cache
 EELAYER 25 0
@@ -223,6 +224,7 @@ Wire Wire Line
 	7650 3650 6950 3650
 Wire Wire Line
 	6950 4150 7650 4150
+Connection ~ 6950 3650
 Wire Wire Line
 	6950 4650 7650 4650
 Connection ~ 6950 4150
@@ -269,11 +271,13 @@ Connection ~ 7050 4750
 Wire Wire Line
 	4800 5100 4900 5100
 Wire Wire Line
-	4900 4950 4900 5300
+	4900 5100 4900 5300
 Wire Wire Line
 	4900 5300 5000 5300
 Wire Wire Line
-	4650 4950 4900 4950
+	4800 5100 4800 4950
+Wire Wire Line
+	4800 4950 4650 4950
 Wire Wire Line
 	4650 4950 4650 3400
 Wire Wire Line
@@ -310,5 +314,4 @@ Wire Wire Line
 	4550 4400 4550 4500
 Wire Wire Line
 	4550 4500 4750 4500
-Connection ~ 4900 5100
 $EndSCHEMATC
