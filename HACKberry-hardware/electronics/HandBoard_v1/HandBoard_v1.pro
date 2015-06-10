@@ -1,4 +1,4 @@
-update=2015/06/07 7:54:47
+update=2015/06/07 16:28:05
 version=1
 last_client=kicad
 [pcbnew]
@@ -61,3 +61,13 @@ LibName29=atmel
 LibName30=contrib
 LibName31=valves
 LibName32=arduino
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

@@ -90,17 +90,6 @@ F 3 "" H 8000 4850 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Seed_Studio_Adjustable_DC/DC_Power_Converter_(1.25V_-_35V/3A) U3
-U 1 1 555F2DA3
-P 5500 5400
-F 0 "U3" H 5500 5650 60  0000 C CNN
-F 1 "Seed_Studio_Adjustable_DC/DC_Power_Converter_(1.25V_-_35V/3A)" H 5550 5150 60  0000 C CNN
-F 2 "" H 5550 5150 60  0001 C CNN
-F 3 "" H 5550 5150 60  0000 C CNN
-	1    5500 5400
-	1    0    0    -1  
-$EndComp
-$Comp
 L 3-CONDUCTOR_MINIATUIRE_JACK_MJ-4535-3 U1
 U 1 1 555F3180
 P 3200 4700
@@ -327,4 +316,15 @@ Wire Wire Line
 	3700 4050 3700 4200
 Wire Wire Line
 	3700 4200 4750 4200
+$Comp
+L Seed_Studio_Adjustable_DC/DC_Power_Converter_(1.25V_-_35V/3A) U3
+U 1 1 555F2DA3
+P 5500 5400
+F 0 "U3" H 5500 5650 60  0000 C CNN
+F 1 "Seed_Studio_Adjustable_DC/DC_Power_Converter_(1.25V_-_35V/3A)" H 5550 5150 60  0000 C CNN
+F 2 "" H 5550 5150 60  0001 C CNN
+F 3 "" H 5550 5150 60  0000 C CNN
+	1    5500 5400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
