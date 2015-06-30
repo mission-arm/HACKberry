@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:SensorBoard_v1-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -45,7 +46,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L 3-CONDUCTOR_MINIATUIRE_JACK_MJ-4535-3 U1
+L 3-CONDUCTOR_MINIATUIRE_JACK_MJ-4535-3-RESCUE-SensorBoard_v1 U1
 U 1 1 55601F64
 P 4750 4000
 F 0 "U1" H 4550 4300 60  0000 C CNN
