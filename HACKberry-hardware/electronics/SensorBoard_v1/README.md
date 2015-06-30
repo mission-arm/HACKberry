@@ -7,7 +7,7 @@ If you use the data, please use following credit.
 
 Design:  
 exiii  
-CC: BY-SA 4.0
+CC BY-SA 4.0
 
 Original design:  
 M. Yoshikawa
