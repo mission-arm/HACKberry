@@ -6,76 +6,76 @@ The name represents our vision to “hack” at problems, grow branches of joy t
 
 # HACKberry Open Source Project Policy
 
-This policy (“Policy”) of “HACKberry Open Source Project” ( “Project”) sets forth the scope and the terms and conditions of the provision of the source codes and data etc. and the licensing the rights to work the inventions regarding to the “HACKberry” by Exiii Inc. (“Company”).
+This policy (“Policy”) of “HACKberry Open Source Project” ( “Project”) sets forth the scope and the terms and conditions of the provision of the source codes and data etc. regarding “HACKberry” by Exiii Inc. (“Company”).
 
 ##1. Purpose  
 
-1.1. The purpose of the Project is that the Company releases the source codes and data etc. and licenses the rights to work the inventions regarding to the HACKberry to all kinds of users of the Project (“Users”) based on the Policy so that  the Company and Users cooperate to promote the implementation of  the research and development of artificial arms and spread them.
+1.1. The purpose of the Project is for the Company to release the source codes and data etc. and license the Company’s invention to all users of the Project (“Users”) in accordance with the Policy to promote the research development and spreading of artificial arms.
 
-1.2. Users shall not use or work the source codes and data or the inventions released or licensed under the Policy for any of the following purposes:  
-1.2.1. for the military purpose.  
-1.2.2. for the purpose against public order or customs.  
-1.2.3. for the purpose of defaming or damaging the credit of the Company or the HACKberry.  
-1.2.4. for the purpose that the Company determines falls or can fall under any one of from 1.2.1. to 1.2.3.
+1.2. Users shall not use the source codes and data or the inventions released or licensed under the Policy for any of the following purposes:  
+1.2.1. military purpose.  
+1.2.2. purpose against public order or morality.  
+1.2.3. purpose of defaming or damaging the credit of the Company or HACKberry; and
+1.2.4. any other purposes that the Company determines falls or is likely to fall under any of the above section 1.2.1. to 1.2.3.
 
 ##2. Source Codes for Software
-The source codes for the software of the HACKberry are released under the following licenses.
+The source codes for the software of HACKberry are released under the following licenses.
 
 |source codes|licenses|  
 |:-:|:-:|  
-|2.1. Arduino Sketch (means the source code for Arduino Micro built in the HACKberry artificial arms (“Artificial Arms”) )|[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)|
+|2.1. Arduino Sketch (the source code for Arduino Micro built into the artificial arms)|[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)|
 
 ##3. Data for Hardware
-The data for the hardwares of the HACKberry are released under the following licenses.  
+The data for the hardwares of HACKberry is released under the following licenses.  
 
 |Data|licenses|  
 |:-:|:-:|  
-|3.1. 3D data for  shaping parts used in the Artificial Arms|[Creative Commons License BY-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)|
-|3.2. Hand substrates data (mean datas for substrates connecting microcontroller boards, motors, sensors and batteries)|[Creative Commons License BY-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)|
-|3.3. Sensor substrates data ( mean datas for substrates used to build reflection type photosensors that detect ridges in muscle tissue)|[Creative Commons License BY-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)|
-|3.4. Battery substrates data (mean datas for substrates built in battery boxes)|[Creative Commons License BY-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)|
+|3.1. 3D data (the configuration data for each of the parts used in the artificial arms)|[Creative Commons License BY-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)|
+|3.2. Hand substrates data (the data for circuit substrates connecting microcontroller boards, motors, sensors and batteries)|[Creative Commons License BY-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)|
+|3.3. Sensor substrates data (the data for circuit substrates used to fix reflection type photosensors that detect ridges in muscle tissue)|[Creative Commons License BY-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)|
+|3.4. Battery substrates data (the data for circuit substrates built into battery boxes)|[Creative Commons License BY-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)|
 
 ##4. Patents
-4.1. The Company grants Users free-of-charge, regardless of region, without any time limitations, non-exclusive, non-transferable and non-re-licensable permission to work the Company’s inventions (including patent inventions and patent-pending inventions) only when Users work them in order to make Artificial Arms using the source codes and the datas in accordance with the licenses written in 2. and 3. and not for the purposes written in 1.2.
+4.1. The Company grants Users a free-of-charge, non-exclusive, non-transferable and non-sub-licensable license(without any restriction of territory or time) to use the Company’s inventions (including registered patent inventions and pending patent inventions) provided that (i)such usage is necessary for Users to make artificial arms by using the source codes and the data in accordance with the licenses provided under sections 2 and 3 and (ii) such usage is not in violation of section 1.2.
 
-4.2. The inventions written in 4.1. includes the one about joint mechanism that enables Artificial Arms to operate like human hands. Though it  is patent pending at present, the Company will update the detail of the invention by appropriate methods (including revision of the Policy, make notice on the forum on this website and etc.) according to the process of patent application.
+4.2. The inventions referred to in the preceding section 4.1. includes the invention regarding the joint mechanism that enables artificial arms to operate similarly to human arms with a simple conformation.Presently, the invention  is patent pending, however, the Company will update the details of the invention through appropriate methods (including revision of the Policy, notification on the forum on this website and etc.) according to the development in the patent application.
 
 ##5. Trademark and Other Contents
-5.1. The following is under procedure of application for trademark.  
+5.1. The following trademark is under procedure of application for trademark.  
 Trademark: exiii  
 Application number: 2015-27269  
 
-5.2. The “Intellectual Property Rights” (hereinafter used to refer to any rights already owned or to obtain or apply for registration of such rights) such as copyright (including the rights specified in articles 27, 28 and other articles of the Japanese Copyright Act; the same apply hereinafter), patent rights, utility model rights, design rights, trademark rights, and other rights for Trademark and other contents provided by the Company are owned by the Company unless the Policy stipulates otherwise.
+5.2. The “Intellectual Property Rights” (hereinafter used to refer to any rights already owned or to obtain or apply for registration of such rights) which includes copyright (including the rights specified in articles 27, 28 and other articles of the Japanese Copyright Act; the same apply hereinafter), patent rights, utility model rights, design rights, trademark rights, and other intellectual  property rights in and to the trademarks and other contents of the Company are owned by the Company unless the Policy stipulates otherwise.
 
-5.3. Users may not use the Trademarks and other contents at all without prior written permission by the Company.  
+5.3. Users may not use the trademarks and other contents in any way without prior written permission by the Company.  
 
-5.4. About the prior permission stipulated in 5.3., please contact the Email address below.  
+5.4. To obtain the permission stipulated the preceding section 5.3., please contact the below Email address.  
 [info@exiii.jp](mailto:info@exiii.jp)
 
-##6. Superiority of the Public Licenses
-When a clause in one of the licenses applied to source codes or data based on 2. or 3. stipulates differently from its correspondent clause in the Policy that stipulates about the same issue as the clause in the license, the clause of the license shall prevail over the correspondent clause in the Policy unless the Policy stipulates otherwise.
+##6. Superiority of the individual Licenses
+In the event of discrepancy between the provisions of this Policy and the provisions of the licenses regarding the source codes and data provided under sections 2 and 3 of this Policy, the provisions of the licenses regarding the source codes and data provided under sections 2 and 3 shall prevail unless provided otherwise.
 
 ##7. The Company’s Exemption of Liability
-7.1. The Company shall not explicitly or implicitly guarantee that this website itself, source codes and data provided on this website, and the licenses quoted in the Policy are free from de facto or legal flaws (including flaws relating to safety, reliability, accuracy, completion, validity, compatibility with certain purposes, security, as well as errors, bugs, and infringement of rights). The Company shall have no obligation to provide the Service of the HACKberry without such defects to the Users.  
+7.1. The Company shall not explicitly or implicitly guarantee that this website itself, the source codes and data provided on this website, and the licenses quoted in the Policy are free from de facto or legal flaws (including flaws relating to safety, reliability, accuracy, completion, validity, compatibility with certain purposes, security, as well as errors, bugs, and infringement of rights). The Company shall have no obligation to provide services regarding HACKberry free of such defects to  Users.  
 
-7.2. The Company shall not be responsible for conflicts or damages whatever related to the usage of the source codes and datas provided by the Company or the interpretation and application of the Policy among Users or between Users and third parties.  
+7.2. The Company shall not in any way be responsible for any disputes or damages whatsoever arising in relation to the usage of the source codes and data provided by the Company or the interpretation and application of the Policy among Users or between Users and third parties.  
 
-7.3. The Company shall not give guarantee that the source codes and datas are available on this website at any time. The Company shall not be responsible for any damage to Users or third parties that arises from the situation the Company can not provide the source codes and data irrespectively of the cause of the situation such as maintenance of this website.
+7.3. The Company shall not provide any guarantee that the source codes and data will constantly be available on this website at any time. The Company shall not in any way be responsible for any damages caused to Users or third parties that arises from a situation where the Company cannot provide the source codes and data irrespectively of the cause of such situation such as maintenance of this website.
 
-##8. Modification of the Contents etc.
-8.1. The Company may modify the contents or methods of provision of the source codes and data, the content of permission to work the Company’s inventions, or  may terminate the provision or the license (hereinafter referred to as the “Modification etc.”)  when the Company deems necessary, without providing prior notice to Users.  
+##8. Modification of the provision and contents etc.
+8.1. The Company may modify the contents or methods of provision of the source codes and data, the content of the license to use the Company’s inventions, or terminate the provision or the license (hereinafter referred to as the “Modifications.”)  when the Company deems necessary, without providing prior notice to Users.  
 
-8.2. Related to the Modification and etc., the Company shall not be responsible for conflicts between Users and third parties or damages to Users or third parties.
+8.2. The Company shall not be responsible for any disputes between Users and third parties or damages to Users or third parties arising in relation to the Modifications.
 
 ##9. Modification of the Policy
 9.1. The Company may modify the Policy when the Company deems necessary, without providing prior notice to Users.
 
-9.2. Users shall be deemed to have granted valid and irrevocable consent to the modified Policy by continuing to download or use the source codes and data, or work the Company’s inventions. However, this does not affect to the licenses applicable to and the usage of the source codes and datas that are downloaded by Users before the modification of the Policy.
+9.2. Users shall be deemed to have granted valid and irrevocable consent to the modified Policy by continuing to download or use the source codes and data, or use the Company’s inventions. However, such modifications shall not affect the contents of the licenses applicable to the source codes and data that are downloaded by Users prior to the modification of the Policy in accordance with the Policy prior to the modification of the Policy.
 
 ##10. Governing Law and Jurisdiction
 10.1. Where the Company has provided Users with a translation of the Japanese language version of the Policy (“Japanese Version”), the Japanese Version and a translation will govern the relationship between Users and the Company. In the event of a contradiction between Japanese Version and a translation, the provisions in the Japanese Version shall take precedence over any other translation. The Policy shall be governed by the laws of Japan.  
 
-10.2. Conflicts that arise from the Policy or conflicts between Users and the Company related to the Policy will be governed primarily under the exclusive jurisdiction of the District Court of Tokyo or the Tokyo Summary Court.
+10.2. Any disputes that arise from the Policy or are related to the Policy will be governed primarily under the exclusive jurisdiction of the Tokyo District Court or the Tokyo Summary Court.
 
 Prescribed on May 25th, 2015  
 exiii Inc.  
