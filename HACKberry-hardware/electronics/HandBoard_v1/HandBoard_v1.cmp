@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Cmp-Mod V01 Created by Cvpcb (after 2015-may-01 BZR unknown)-product   date = 2015/06/16 22:36:03
+=======
+Cmp-Mod V01 Created by Cvpcb (after 2015-may-01 BZR unknown)-product   date = 2015/07/02 20:09:00
+>>>>>>> origin/develop
 
 BeginCmp
 TimeStamp = /555F5A20;
@@ -9,26 +13,34 @@ EndCmp
 
 BeginCmp
 TimeStamp = /555F3438;
-Reference = SW1;
+Reference = SW1:MAX1;
 ValeurCmp = SW_PUSH_SKRGAQD010;
 IdModule  = HACKberry_v1:SKRGAQ0010;
 EndCmp
 
 BeginCmp
 TimeStamp = /555F3584;
-Reference = SW2;
+Reference = SW2:MIN1;
 ValeurCmp = SW_PUSH_SKRGAQD010;
 IdModule  = HACKberry_v1:SKRGAQ0010;
 EndCmp
 
 BeginCmp
 TimeStamp = /555F35CD;
-Reference = SW3;
+Reference = SW3:Thumb1;
 ValeurCmp = SW_PUSH_SKRGAQD010;
 IdModule  = HACKberry_v1:SKRGAQ0010;
 EndCmp
 
 BeginCmp
+TimeStamp = /55950644;
+Reference = SW4:Middle1;
+ValeurCmp = SW_PUSH_SKRGAQD010;
+IdModule  = HACKberry_v1:SKRGAQ0010;
+EndCmp
+
+BeginCmp
+<<<<<<< HEAD
 TimeStamp = /5573938F;
 Reference = SW4;
 ValeurCmp = SW_PUSH;
@@ -36,6 +48,8 @@ IdModule  = HACKberry_v1:SKRGAQ0010;
 EndCmp
 
 BeginCmp
+=======
+>>>>>>> origin/develop
 TimeStamp = /555F35ED;
 Reference = SW5;
 ValeurCmp = SWITCH_SS-12SDP2;
@@ -60,7 +74,11 @@ BeginCmp
 TimeStamp = /555F2DA3;
 Reference = U3;
 ValeurCmp = Seed_Studio_Adjustable_DC/DC_Power_Converter_(1.25V_-_35V/3A);
+<<<<<<< HEAD
 IdModule  = HACKberry_v1:Arduino_Micro;
+=======
+IdModule  = Pin_Headers:Pin_Header_Straight_2x02;
+>>>>>>> origin/develop
 EndCmp
 
 BeginCmp
