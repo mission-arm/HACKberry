@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-update=2015/06/16 22:32:00
-=======
 update=2015/07/02 19:36:04
->>>>>>> origin/develop
 version=1
 last_client=kicad
 [cvpcb]
@@ -57,8 +53,6 @@ LibName30=atmel
 LibName31=contrib
 LibName32=valves
 LibName33=arduino
-<<<<<<< HEAD
-=======
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -79,4 +73,3 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.2
 BoardOutlineThickness=0.09999999999999999
 ModuleOutlineThickness=0.15
->>>>>>> origin/develop

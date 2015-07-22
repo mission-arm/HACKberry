@@ -1,12 +1,7 @@
 (export (version D)
   (design
-<<<<<<< HEAD
-    (source C:/Users/Yamaura/Documents/GitHub/HACKberry/HACKberry-hardware/electronics/HandBoard_v1/HandBoard_v1.sch)
-    (date "2015/06/16 22:36:10")
-=======
     (source C:\Users\Yamaura\Documents\GitHub\HACKberry\HACKberry-hardware\electronics\HandBoard_v1\HandBoard_v1.sch)
     (date "2015/07/02 21:09:32")
->>>>>>> origin/develop
     (tool "Eeschema (after 2015-may-01 BZR unknown)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -22,7 +17,7 @@
   (components
     (comp (ref U2)
       (value Arduino_Micro)
-      (footprint HACKberry_v1:MINIATURE_JACK_MJ-4535-3)
+      (footprint HACKberry_v1:Arduino_Micro)
       (libsource (lib myParts) (part Arduino_Micro))
       (sheetpath (names /) (tstamps /))
       (tstamp 555EFCA5))
@@ -82,36 +77,17 @@
       (tstamp 555F5A20))
     (comp (ref U3)
       (value "Seed_Studio_Adjustable_DC/DC_Power_Converter_(1.25V_-_35V/3A)")
-<<<<<<< HEAD
-      (footprint HACKberry_v1:Arduino_Micro)
-      (libsource (lib myParts) (part "Seed_Studio_Adjustable_DC/DC_Power_Converter_(1.25V_-_35V/3A)"))
-      (sheetpath (names /) (tstamps /))
-      (tstamp 555F2DA3))
-    (comp (ref SW4)
-      (value SW_PUSH)
-=======
       (footprint Pin_Headers:Pin_Header_Straight_2x02)
       (libsource (lib myParts) (part "Seed_Studio_Adjustable_DC/DC_Power_Converter_(1.25V_-_35V/3A)"))
       (sheetpath (names /) (tstamps /))
       (tstamp 555F2DA3))
     (comp (ref SW4:Middle1)
       (value SW_PUSH_SKRGAQD010)
->>>>>>> origin/develop
       (footprint HACKberry_v1:SKRGAQ0010)
       (libsource (lib device) (part SW_PUSH))
       (sheetpath (names /) (tstamps /))
       (tstamp 55950644)))
   (libparts
-<<<<<<< HEAD
-    (libpart (lib HandBoard_v1-rescue) (part 3-CONDUCTOR_MINIATUIRE_JACK_MJ-4535-3-RESCUE-HandBoard_v1)
-      (fields
-        (field (name Reference) U)
-        (field (name Value) 3-CONDUCTOR_MINIATUIRE_JACK_MJ-4535-3-RESCUE-HandBoard_v1))
-      (pins
-        (pin (num 1) (name GND) (type passive))
-        (pin (num 2) (name INPUT) (type passive))
-        (pin (num 4) (name VCC) (type power_in))))
-=======
     (libpart (lib myParts) (part "Seed_Studio_Adjustable_DC/DC_Power_Converter_(1.25V_-_35V/3A)")
       (fields
         (field (name Reference) U)
@@ -138,7 +114,6 @@
         (pin (num 1) (name INPUT) (type input))
         (pin (num 2) (name VCC) (type power_in))
         (pin (num 3) (name GND) (type passive))))
->>>>>>> origin/develop
     (libpart (lib myParts) (part Arduino_Micro)
       (fields
         (field (name Reference) U)
@@ -175,31 +150,12 @@
         (pin (num SS) (name RX_LED/SS) (type BiDi))
         (pin (num TX) (name 1/TX) (type BiDi))
         (pin (num VIN) (name VIN) (type passive))))
-<<<<<<< HEAD
-    (libpart (lib myParts) (part BARREL_JACK)
-      (description "DC Barrel Jack")
-      (fields
-        (field (name Reference) CON)
-        (field (name Value) BARREL_JACK))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))
-        (pin (num 3) (name ~) (type passive))))
-    (libpart (lib myParts) (part Servo_Motor)
-=======
     (libpart (lib device) (part SW_PUSH)
       (description "Push Button")
->>>>>>> origin/develop
       (fields
         (field (name Reference) SW)
         (field (name Value) SW_PUSH))
       (pins
-<<<<<<< HEAD
-        (pin (num 1) (name INPUT) (type input))
-        (pin (num 2) (name VCC) (type power_in))
-        (pin (num 3) (name GND) (type passive))))
-    (libpart (lib myParts) (part "Seed_Studio_Adjustable_DC/DC_Power_Converter_(1.25V_-_35V/3A)")
-=======
         (pin (num 1) (name 1) (type passive))
         (pin (num 2) (name 2) (type passive))))
     (libpart (lib device) (part SWITCH_INV)
@@ -212,38 +168,13 @@
         (pin (num 2) (name 2) (type passive))
         (pin (num 3) (name 3) (type passive))))
     (libpart (lib HandBoard_v1-rescue) (part 3-CONDUCTOR_MINIATUIRE_JACK_MJ-4535-3-RESCUE-HandBoard_v1)
->>>>>>> origin/develop
       (fields
         (field (name Reference) U)
         (field (name Value) 3-CONDUCTOR_MINIATUIRE_JACK_MJ-4535-3-RESCUE-HandBoard_v1))
       (pins
-<<<<<<< HEAD
-        (pin (num 1) (name IN+) (type passive))
-        (pin (num 2) (name IN-) (type passive))
-        (pin (num 3) (name OUT-) (type passive))
-        (pin (num 4) (name OUT+) (type power_out))))
-    (libpart (lib device) (part SWITCH_INV)
-      (description "Switch inverseur")
-      (fields
-        (field (name Reference) SW)
-        (field (name Value) SWITCH_INV))
-      (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 2) (type passive))
-        (pin (num 3) (name 3) (type passive))))
-    (libpart (lib device) (part SW_PUSH)
-      (description "Push Button")
-      (fields
-        (field (name Reference) SW)
-        (field (name Value) SW_PUSH))
-      (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 2) (type passive)))))
-=======
         (pin (num 1) (name GND) (type passive))
         (pin (num 2) (name VCC) (type power_in))
         (pin (num 4) (name INPUT) (type passive)))))
->>>>>>> origin/develop
   (libraries
     (library (logical HandBoard_v1-rescue)
       (uri C:\Users\Yamaura\Documents\GitHub\HACKberry\HACKberry-hardware\electronics\HandBoard_v1\HandBoard_v1-rescue.lib))
@@ -253,24 +184,6 @@
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\device.lib")))
   (nets
     (net (code 1) (name "Net-(U3-Pad4)")
-<<<<<<< HEAD
-      (node (ref U4) (pin 2))
-      (node (ref U6) (pin 2))
-      (node (ref U3) (pin 4))
-      (node (ref U5) (pin 2)))
-    (net (code 2) (name "Net-(U2-Pad3)")
-      (node (ref U2) (pin 3))
-      (node (ref U4) (pin 1)))
-    (net (code 3) (name "Net-(SW2-Pad2)")
-      (node (ref SW2) (pin 2))
-      (node (ref U2) (pin A5)))
-    (net (code 4) (name "Net-(SW3-Pad2)")
-      (node (ref U2) (pin A4))
-      (node (ref SW3) (pin 2)))
-    (net (code 5) (name "Net-(U2-Pad5)")
-      (node (ref U2) (pin 5))
-      (node (ref U5) (pin 1)))
-=======
       (node (ref U5) (pin 2))
       (node (ref U6) (pin 2))
       (node (ref U3) (pin 4))
@@ -287,7 +200,6 @@
     (net (code 5) (name "Net-(U2-Pad5)")
       (node (ref U5) (pin 1))
       (node (ref U2) (pin 5)))
->>>>>>> origin/develop
     (net (code 6) (name "Net-(U2-Pad6)")
       (node (ref U6) (pin 1))
       (node (ref U2) (pin 6)))
@@ -296,43 +208,16 @@
       (node (ref SW5) (pin 2)))
     (net (code 8) (name "Net-(CON1-Pad2)")
       (node (ref CON1) (pin 2)))
-<<<<<<< HEAD
-    (net (code 9) (name "Net-(U1-Pad4)")
-=======
     (net (code 9) (name "Net-(U1-Pad2)")
->>>>>>> origin/develop
       (node (ref U2) (pin 3V3))
       (node (ref U1) (pin 2)))
     (net (code 10) (name "Net-(U1-Pad4)")
       (node (ref U2) (pin A0))
       (node (ref U1) (pin 4)))
-<<<<<<< HEAD
-    (net (code 10) (name "Net-(U1-Pad2)")
-      (node (ref U1) (pin 2))
-      (node (ref U2) (pin A0)))
-=======
->>>>>>> origin/develop
     (net (code 11) (name "Net-(SW5-Pad1)")
       (node (ref SW5) (pin 1))
       (node (ref U2) (pin VIN))
       (node (ref U3) (pin 1)))
-<<<<<<< HEAD
-    (net (code 12) (name "Net-(SW4-Pad2)")
-      (node (ref SW4) (pin 2))
-      (node (ref U2) (pin A3)))
-    (net (code 13) (name "Net-(U3-Pad3)")
-      (node (ref U4) (pin 3))
-      (node (ref U5) (pin 3))
-      (node (ref U3) (pin 3))
-      (node (ref U6) (pin 3)))
-    (net (code 14) (name "Net-(CON1-Pad3)")
-      (node (ref SW1) (pin 1))
-      (node (ref SW2) (pin 1))
-      (node (ref SW3) (pin 1))
-      (node (ref U1) (pin 1))
-      (node (ref U3) (pin 2))
-      (node (ref SW4) (pin 1))
-=======
     (net (code 12) (name "Net-(SW4:Middle1-Pad2)")
       (node (ref SW4:Middle1) (pin 2))
       (node (ref U2) (pin A3)))
@@ -348,7 +233,6 @@
       (node (ref U1) (pin 1))
       (node (ref U3) (pin 2))
       (node (ref SW4:Middle1) (pin 1))
->>>>>>> origin/develop
       (node (ref CON1) (pin 3)))
     (net (code 16) (name "Net-(U2-Pad5V)")
       (node (ref U2) (pin 5V)))
@@ -388,13 +272,8 @@
       (node (ref U2) (pin A2)))
     (net (code 34) (name "Net-(U2-Pad13)")
       (node (ref U2) (pin 13)))
-<<<<<<< HEAD
-    (net (code 35) (name "Net-(SW1-Pad2)")
-      (node (ref SW1) (pin 2))
-=======
     (net (code 35) (name "Net-(SW1:MAX1-Pad2)")
       (node (ref SW1:MAX1) (pin 2))
->>>>>>> origin/develop
       (node (ref U2) (pin A6)))
     (net (code 37) (name "Net-(U2-PadNC)")
       (node (ref U2) (pin NC)))
