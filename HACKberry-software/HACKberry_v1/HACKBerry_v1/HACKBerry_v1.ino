@@ -26,7 +26,7 @@ int swCount3 = 0;
 
 int sensorValue = 0; // value read from the sensor
 int sensorMax = 700;
-int sensorMin = 400;
+int sensorMin = 0;
 int threshold = 0;
 
 //speed settings
