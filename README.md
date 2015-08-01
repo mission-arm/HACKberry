@@ -77,9 +77,9 @@ In the event of discrepancy between the provisions of this Policy and the provis
 
 10.2. Any disputes that arise from the Policy or are related to the Policy will be governed primarily under the exclusive jurisdiction of the Tokyo District Court or the Tokyo Summary Court.
 
-Prescribed on May 25th, 2015  
 exiii Inc.  
-
+Prescribed on May 25th, 2015  
+Updated on July 20th, 2015
 
 # HACKberry Open Source Project Policy(Japanese)
 
@@ -154,5 +154,6 @@ HACKberryに関するハードウェアに関する各データは、以下の�
 
 10.2. 本ポリシーに起因し、または関連する一切の紛争については、訴額に応じて、東京地方裁判所または東京簡易裁判所を第一審の専属的合意管轄裁判所とします。
 
-2015年5月25日制定  
 イクシー株式会社
+2015年5月25日制定  
+2015年7月20日改訂  
