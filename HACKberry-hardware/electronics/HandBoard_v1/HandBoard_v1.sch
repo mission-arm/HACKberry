@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:HandBoard_v1-rescue
-LIBS:myParts
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,7 +29,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:arduino
 LIBS:HandBoard_v1-cache
 EELAYER 25 0
 EELAYER END
