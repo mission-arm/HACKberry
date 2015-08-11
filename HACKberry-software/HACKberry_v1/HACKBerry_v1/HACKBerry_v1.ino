@@ -143,7 +143,9 @@ void loop() {
   Serial.print(",finger=");
   Serial.print(fingerPinState);  
   Serial.print(",indexPos=");
-  Serial.print(indexPos);
+  Serial.print(indexPos);  
+  Serial.print(",thumb=");
+  Serial.print(swCount3);
   Serial.print(",speed=");
   Serial.println(speed);
   

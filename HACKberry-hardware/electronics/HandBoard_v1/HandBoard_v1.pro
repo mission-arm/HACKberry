@@ -1,4 +1,4 @@
-update=2015/08/05 18:15:58
+update=2015/08/07 20:16:10
 version=1
 last_client=kicad
 [cvpcb]
@@ -38,7 +38,7 @@ BoardOutlineThickness=0.09999999999999999
 ModuleOutlineThickness=0.15
 [eeschema]
 version=1
-LibDir=
+LibDir=../HACKberry_v1.pretty
 [eeschema/libraries]
 LibName1=HandBoard_v1-rescue
 LibName2=power
@@ -71,3 +71,4 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=HandBoard_v1-cache
+LibName32=HACKberry_v1
