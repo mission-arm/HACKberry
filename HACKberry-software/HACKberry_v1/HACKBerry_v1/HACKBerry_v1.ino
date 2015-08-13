@@ -57,16 +57,16 @@ int middlePos = 90;
 void setup() {
   Serial.begin(9600); 
 
-  pinMode(calibPin0, INPUT); //MAX
+  pinMode(calibPin0, INPUT); //MAX A6
   digitalWrite(calibPin0, HIGH);
   
-  pinMode(calibPin1, INPUT); //MIN
+  pinMode(calibPin1, INPUT); //MIN A5
   digitalWrite(calibPin1, HIGH);
   
-  pinMode(thumbPin, INPUT);
+  pinMode(thumbPin, INPUT); //A4
   digitalWrite(thumbPin,HIGH);
 
-  pinMode(fingerPin, INPUT);
+  pinMode(fingerPin, INPUT); //A3
   digitalWrite(fingerPin,HIGH);
 
   myservo0.attach(3);//index  
@@ -132,7 +132,7 @@ void loop() {
 
 
 //status
-  Serial.print("Min=");
+/*  Serial.print("Min=");
   Serial.print(sensorMin);
   Serial.print(",Max=");
   Serial.print(sensorMax);
@@ -148,9 +148,17 @@ void loop() {
   Serial.print(swCount3);
   Serial.print(",speed=");
   Serial.println(speed);
+*/  
+  Serial.print("calibPin0=");
+  Serial.print(calibPin0);  
+  Serial.print(",calibPin1=");
+  Serial.print(calibPin1);  
+  Serial.print(",thumbPin=");
+  Serial.print(thumbPin);
+  Serial.print(",fingerPin=");
+  Serial.println(fingerPin);
   
   
-
 //calculate speed
   if(sensorValue < (sensorMin+(sensorMax-sensorMin)/8)){
     speed = speedReverse;
