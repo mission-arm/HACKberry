@@ -1,10 +1,10 @@
 #include <Servo.h>
 
 //Micro
-boolean calibPin0 =  A6; //set the MAX value of the sensor input
-boolean calibPin1 =  A5; //set the MIN value of the sensor input
-boolean thumbPin =  A4; //change the thumb position among three preset values
-boolean fingerPin =  A3; //lock or unlock the position of middle finger, ring finger and pinky
+const int calibPin0 =  A6; //set the MAX value of the sensor input
+const int calibPin1 =  A5; //set the MIN value of the sensor input
+const int thumbPin =  A4; //change the thumb position among three preset values
+const int fingerPin =  A3; //lock or unlock the position of middle finger, ring finger and pinky
 const int analogInPin0 = A0; //sensor input
 
 Servo myservo0; //controls index finger
@@ -12,8 +12,8 @@ Servo myservo1; //controls middle finger, ring finger and pinky
 Servo myservo2; //controls thumb
 
 float target = 0;
-int thumbPinState = 1;
-int fingerPinState = 1;
+boolean thumbPinState = 1;
+boolean fingerPinState = 1;
 
 int count = 0;
 int mode = 0;
@@ -40,14 +40,14 @@ int positionMin = 0;
 int position =0;
 int prePosition = 0;
 
-int thumbPinch = 58;  
+int thumbPinch = 72;  
 int thumbOpen = 153;
 
 
-int indexMin = 180;//extend
+int indexMin = 170;//extend
 int indexMax = 0;//flex
 
-int middleMin = 120;//extend 
+int middleMin = 110;//extend 
 int middleMax = 40;//flex
 
 int thumbPos = 90;
@@ -111,12 +111,10 @@ void loop() {
 
   if(swCount2 == 10){
     swCount2 = 0;
-    thumbPinState ++;
-    if(thumbPinState > 1){
-      thumbPinState = 0;    
+    thumbPinState = !thumbPinState;    
+    while(digitalRead(thumbPin) == LOW){delay(1);}    
     }
-    while(digitalRead(thumbPin) == LOW){delay(1);}   
-  }
+  
 
   if(digitalRead(fingerPin) == LOW){//A3
      swCount3 += 1;
@@ -132,7 +130,7 @@ void loop() {
 
 
 //status
-/*  Serial.print("Min=");
+  Serial.print("Min=");
   Serial.print(sensorMin);
   Serial.print(",Max=");
   Serial.print(sensorMax);
@@ -147,17 +145,12 @@ void loop() {
   Serial.print(",thumb=");
   Serial.print(swCount3);
   Serial.print(",speed=");
-  Serial.println(speed);
-*/  
-  Serial.print("calibPin0=");
-  Serial.print(calibPin0);  
-  Serial.print(",calibPin1=");
-  Serial.print(calibPin1);  
-  Serial.print(",thumbPin=");
-  Serial.print(thumbPin);
-  Serial.print(",fingerPin=");
-  Serial.println(fingerPin);
+  Serial.print(speed);
   
+  Serial.print(",thumbPinState=");
+  Serial.print(thumbPinState);
+  Serial.print(",fingerPinState=");
+  Serial.println(fingerPinState);  
   
 //calculate speed
   if(sensorValue < (sensorMin+(sensorMax-sensorMin)/8)){
