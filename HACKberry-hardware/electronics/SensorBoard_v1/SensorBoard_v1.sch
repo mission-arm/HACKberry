@@ -29,7 +29,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:myParts
 LIBS:SensorBoard_v1-cache
 LIBS:HACKberry_v1
 EELAYER 25 0

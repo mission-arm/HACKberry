@@ -1,8 +1,8 @@
 (module MINIATURE_JACK_MJ-4535-3 (layer F.Cu) (tedit 55C5CA70)
-  (fp_text reference DIP (at 0 3.81) (layer F.SilkS) hide
+  (fp_text reference U1 (at 0 3.81) (layer F.SilkS) hide
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (fp_text value MINIATURE_JACK_MJ-4535-3 (at 0 -5) (layer F.Fab)
+  (fp_text value 3-CONDUCTOR_MINIATUIRE_JACK_MJ-4535-3-RESCUE-HandBoard_v1 (at 0 -5) (layer F.Fab)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_line (start -11 3) (end -9.75 3) (layer F.SilkS) (width 0.15))

@@ -1,4 +1,4 @@
-update=2015/08/07 21:38:48
+update=2015/08/22 13:28:37
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,6 +25,16 @@ version=1
 NetIExt=net
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [eeschema]
 version=1
 LibDir=
@@ -59,17 +69,5 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=yamaura
-LibName32=myParts
-LibName33=SensorBoard_v1-cache
-LibName34=C:/Users/Yamaura/Documents/GitHub/HACKberry/HACKberry-hardware/electronics/HACKberry_v1.pretty/HACKberry_v1
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
+LibName31=SensorBoard_v1-cache
+LibName32=C:/Users/Yamaura/Documents/GitHub/HACKberry/HACKberry-hardware/electronics/HACKberry_v1.pretty/HACKberry_v1
