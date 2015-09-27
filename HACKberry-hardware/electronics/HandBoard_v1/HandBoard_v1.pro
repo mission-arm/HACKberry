@@ -1,4 +1,4 @@
-update=2015/08/07 20:16:10
+update=2015/09/27 15:45:36
 version=1
 last_client=kicad
 [cvpcb]
@@ -6,16 +6,6 @@ version=1
 NetIExt=net
 [general]
 version=1
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -72,3 +62,13 @@ LibName29=contrib
 LibName30=valves
 LibName31=HandBoard_v1-cache
 LibName32=HACKberry_v1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
