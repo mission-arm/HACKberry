@@ -150,9 +150,7 @@ Wire Wire Line
 Wire Wire Line
 	6800 4550 7700 4550
 Wire Wire Line
-	3850 5000 3850 5300
-Wire Wire Line
-	3850 5300 3850 5500
+	3850 5000 3850 5500
 Wire Wire Line
 	3850 5500 5050 5500
 Wire Wire Line
@@ -163,22 +161,14 @@ Wire Wire Line
 	6950 4650 7700 4650
 Connection ~ 6950 4150
 Wire Wire Line
-	6950 3650 6950 4150
-Wire Wire Line
-	6950 4150 6950 4650
-Wire Wire Line
-	6950 4650 6950 5300
+	6950 3650 6950 5300
 Wire Wire Line
 	6950 5300 6050 5300
 Connection ~ 6950 4650
 Wire Wire Line
 	4750 3500 4350 3500
 Wire Wire Line
-	4350 3500 4350 4300
-Wire Wire Line
-	4350 4300 4350 4800
-Wire Wire Line
-	4350 4800 4350 5000
+	4350 3500 4350 5000
 Wire Wire Line
 	4350 4800 3500 4800
 Wire Wire Line
@@ -188,13 +178,7 @@ Connection ~ 4350 4800
 Wire Wire Line
 	2900 3200 2650 3200
 Wire Wire Line
-	2650 3200 2650 3500
-Wire Wire Line
-	2650 3500 2650 3800
-Wire Wire Line
-	2650 3800 2650 4050
-Wire Wire Line
-	2650 4050 2650 4300
+	2650 3200 2650 4300
 Wire Wire Line
 	2650 3500 2900 3500
 Wire Wire Line
@@ -207,11 +191,7 @@ Connection ~ 2650 3800
 Wire Wire Line
 	7700 3750 7050 3750
 Wire Wire Line
-	7050 3750 7050 4250
-Wire Wire Line
-	7050 4250 7050 4750
-Wire Wire Line
-	7050 4750 7050 5500
+	7050 3750 7050 5500
 Wire Wire Line
 	7050 5500 6050 5500
 Wire Wire Line
@@ -223,9 +203,7 @@ Connection ~ 7050 4750
 Wire Wire Line
 	4800 5100 4900 5100
 Wire Wire Line
-	4900 4950 4900 5100
-Wire Wire Line
-	4900 5100 4900 5300
+	4900 4950 4900 5300
 Wire Wire Line
 	4900 5300 5050 5300
 Wire Wire Line
@@ -303,7 +281,7 @@ F 1 "Arduino_Micro" H 5500 3000 60  0000 C CNN
 F 2 "" H 5500 5000 60  0000 C CNN
 F 3 "" H 5500 5000 60  0000 C CNN
 	1    5500 4000
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Servo_Motor U4
@@ -321,7 +299,7 @@ L Servo_Motor U5
 U 1 1 55C4ACAA
 P 8050 4150
 F 0 "U5" H 7850 4450 60  0000 C CNN
-F 1 "Servo_Motor_ASV15MG" H 8050 4350 60  0000 C CNN
+F 1 "Servo_Motor_ES08MD" H 8050 4350 60  0000 C CNN
 F 2 "" H 8050 4350 60  0000 C CNN
 F 3 "" H 8050 4350 60  0000 C CNN
 	1    8050 4150
@@ -332,7 +310,7 @@ L Servo_Motor U6
 U 1 1 55C4ACE8
 P 8050 4650
 F 0 "U6" H 7850 4950 60  0000 C CNN
-F 1 "Servo_Motor_ASV15MB" H 8050 4850 60  0000 C CNN
+F 1 "Servo_Motor_ES08MD" H 8050 4850 60  0000 C CNN
 F 2 "" H 8050 4850 60  0000 C CNN
 F 3 "" H 8050 4850 60  0000 C CNN
 	1    8050 4650
