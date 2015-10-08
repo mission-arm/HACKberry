@@ -40,15 +40,15 @@ int positionMin = 0;
 int position =0;
 int prePosition = 0;
 
-int thumbPinch = 70;  
-int thumbOpen = 153;
+int thumbPinch = 120;  
+int thumbOpen = 50;
 
 
-int indexMin = 170;//extend
-int indexMax = 0;//flex
+int indexMin = 0;//extend
+int indexMax = 160;//flex
 
-int middleMin = 110;//extend 
-int middleMax = 40;//flex
+int middleMin = 65;//extend 
+int middleMax = 130;//flex
 
 int thumbPos = 90;
 int indexPos = 90;
