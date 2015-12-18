@@ -1,0 +1,31 @@
+Cmp-Mod V01 Created by Cvpcb (after 2015-may-01 BZR unknown)-product   date = 12/13/15 01:22:04
+
+BeginCmp
+TimeStamp = /566C357C;
+Reference = J1;
+ValeurCmp = ST-PJ-312;
+IdModule  = ST-PJ-312:SUNTECH_ST-PJ-312;
+EndCmp
+
+BeginCmp
+TimeStamp = /566C1422;
+Reference = R1;
+ValeurCmp = SMD-RES-100R-5%-1/10W(0603);
+IdModule  = SMD-RES-100R-5_-1_10W_0603_:R0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /566C13BB;
+Reference = R2;
+ValeurCmp = SMD-RES-10K-1%-1/10W(0603);
+IdModule  = SMD-RES-10K-1_-1_10W_0603_:R0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /566C115D;
+Reference = U1;
+ValeurCmp = QRE1113GR;
+IdModule  = QRE1113GR:4LEADSMD;
+EndCmp
+
+EndListe
