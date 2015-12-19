@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:/Users/Yamaura/Documents/GitHub/HACKberry/HACKberry-hardware/electronics/SensorBoard_v1_1/SensorBoard_v1_1.sch</source>
+    <date>2015/12/14 23:01:09</date>
+    <tool>Eeschema (after 2015-may-01 BZR unknown)-product</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>SensorBoard_v1_1.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U1">
+      <value>QRE1113GR</value>
+      <footprint>QRE1113GR:4LEADSMD</footprint>
+      <libsource lib="QRE1113GR" part="QRE1113GR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>566C115D</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>SMD-RES-10K-1%-1/10W(0603)</value>
+      <footprint>SMD-RES-10K-1_-1_10W_0603_:R0603</footprint>
+      <libsource lib="SMD-RES-10K-1_-1_10W_0603_" part="SMD-RES-10K-1%-1/10W(0603)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>566C13BB</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>SMD-RES-100R-5%-1/10W(0603)</value>
+      <footprint>SMD-RES-100R-5_-1_10W_0603_:R0603</footprint>
+      <libsource lib="SMD-RES-100R-5_-1_10W_0603_" part="SMD-RES-100R-5%-1/10W(0603)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>566C1422</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>ST-PJ-312</value>
+      <footprint>ST-PJ-312:SUNTECH_ST-PJ-312</footprint>
+      <libsource lib="ST-PJ-312" part="ST-PJ-312"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>566C357C</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="SMD-RES-10K-1_-1_10W_0603_" part="SMD-RES-10K-1%-1/10W(0603)">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">SMD-RES-10K-1%-1/10W(0603)</field>
+        <field name="Footprint">R0603</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SMD-RES-100R-5_-1_10W_0603_" part="SMD-RES-100R-5%-1/10W(0603)">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">SMD-RES-100R-5%-1/10W(0603)</field>
+        <field name="Footprint">R0603</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ST-PJ-312" part="ST-PJ-312">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">ST-PJ-312</field>
+        <field name="Footprint">SUNTECH_ST-PJ-312</field>
+      </fields>
+      <pins>
+        <pin num="COM1" name="COM1" type="BiDi"/>
+        <pin num="COM2" name="COM2" type="BiDi"/>
+        <pin num="L" name="L" type="BiDi"/>
+        <pin num="LS" name="LS" type="BiDi"/>
+        <pin num="R" name="R" type="BiDi"/>
+        <pin num="RS" name="RS" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="QRE1113GR" part="QRE1113GR">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">QRE1113GR</field>
+        <field name="Footprint">4LEADSMD</field>
+      </fields>
+      <pins>
+        <pin num="A" name="A" type="BiDi"/>
+        <pin num="C" name="C" type="BiDi"/>
+        <pin num="E" name="E" type="BiDi"/>
+        <pin num="K" name="K" type="BiDi"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="QRE1113GR">
+      <uri>C:\Users\Yamaura\Documents\GitHub\HACKberry\HACKberry-hardware\electronics\SensorBoard_v1_1\Library\QRE1113GR\QRE1113GR.lib</uri>
+    </library>
+    <library logical="SMD-RES-100R-5_-1_10W_0603_">
+      <uri>C:\Users\Yamaura\Documents\GitHub\HACKberry\HACKberry-hardware\electronics\SensorBoard_v1_1\Library\SMD-RES-100R-5_-1_10W_0603_\SMD-RES-100R-5_-1_10W_0603_.lib</uri>
+    </library>
+    <library logical="SMD-RES-10K-1_-1_10W_0603_">
+      <uri>C:\Users\Yamaura\Documents\GitHub\HACKberry\HACKberry-hardware\electronics\SensorBoard_v1_1\Library\SMD-RES-10K-1_-1_10W_0603_\SMD-RES-10K-1_-1_10W_0603_.lib</uri>
+    </library>
+    <library logical="ST-PJ-312">
+      <uri>C:\Users\Yamaura\Documents\GitHub\HACKberry\HACKberry-hardware\electronics\SensorBoard_v1_1\Library\ST-PJ-312\ST-PJ-312.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="GND">
+      <node ref="U1" pin="E"/>
+      <node ref="U1" pin="K"/>
+      <node ref="J1" pin="L"/>
+    </net>
+    <net code="2" name="VCC">
+      <node ref="J1" pin="COM1"/>
+      <node ref="R1" pin="2"/>
+      <node ref="R2" pin="2"/>
+    </net>
+    <net code="3" name="Net-(R1-Pad1)">
+      <node ref="U1" pin="A"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="4" name="Net-(J1-PadR)">
+      <node ref="J1" pin="R"/>
+      <node ref="U1" pin="C"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="5" name="Net-(J1-PadCOM2)">
+      <node ref="J1" pin="COM2"/>
+    </net>
+    <net code="6" name="Net-(J1-PadRS)">
+      <node ref="J1" pin="RS"/>
+    </net>
+    <net code="7" name="Net-(J1-PadLS)">
+      <node ref="J1" pin="LS"/>
+    </net>
+  </nets>
+</export>

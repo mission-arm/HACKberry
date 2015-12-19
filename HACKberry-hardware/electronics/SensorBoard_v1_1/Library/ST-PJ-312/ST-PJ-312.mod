@@ -1,0 +1,91 @@
+PCBNEW-LibModule-V1  
+# encoding utf-8
+Units mm
+$INDEX
+SUNTECH_ST-PJ-312
+$EndINDEX
+$MODULE SUNTECH_ST-PJ-312
+Po 0 0 0 15 00000000 00000000 ~~
+Li SUNTECH_ST-PJ-312
+Cd 
+Sc 00000000
+At SMD
+Op 0 0 0
+.SolderMask 0.1
+.SolderPaste 0
+T0 -9.652 -1.7145 0.7 0.7 0 0.05 N V 21 "SUNTECH_ST-PJ-312"
+T1 -9.2075 0.1905 0.7 0.7 0 0.05 N V 21 "VAL**"
+DS 7.62 -2.54 5.715 -2.54 0.127 21
+DS 5.715 2.54 7.62 2.54 0.127 21
+DS 7.62 2.54 7.62 -2.54 0.127 21
+DP 0 0 0 0 4 0.381 24
+Dl -6.35 -3.175
+Dl 5.715 -3.175
+Dl 5.715 3.175
+Dl -6.35 3.175
+DS 4.38 3.175 4.38 -3.175 0.0254 24
+DS 5.72 -2.6 5.72 -3.175 0.127 21
+DS 5.72 -3.175 3.82 -3.175 0.127 21
+DS 2.22 -3.2 0.82 -3.2 0.127 21
+DS -0.78 -3.2 -3.98 -3.2 0.127 21
+DS -5.48 -3.2 -6.38 -3.2 0.127 21
+DS -6.38 -3.2 -6.38 1.6 0.127 21
+DS -4.98 3.2 -4.48 3.2 0.127 21
+DS -2.88 3.2 2.12 3.2 0.127 21
+DS 3.72 3.2 5.72 3.2 0.127 21
+DS 5.72 3.2 5.72 2.5 0.127 21
+$PAD
+Sh "LS" R 3.302 1.27 0 0 900
+At SMD N 00888000
+.SolderMask 0.2
+.SolderPaste 0
+Ne 0 ""
+Po -5.715 3.429
+$EndPAD
+$PAD
+Sh "L" R 2.286 1.27 0 0 900
+At SMD N 00888000
+.SolderMask 0.2
+.SolderPaste 0
+Ne 0 ""
+Po -3.683 3.937
+$EndPAD
+$PAD
+Sh "COM2" R 2.794 1.27 0 0 900
+At SMD N 00888000
+.SolderMask 0.2
+.SolderPaste 0
+Ne 0 ""
+Po 2.921 3.683
+$EndPAD
+$PAD
+Sh "RS" R 2.286 1.27 0 0 900
+At SMD N 00888000
+.SolderMask 0.2
+.SolderPaste 0
+Ne 0 ""
+Po -4.699 -3.937
+$EndPAD
+$PAD
+Sh "R" R 2.286 1.27 0 0 900
+At SMD N 00888000
+.SolderMask 0.2
+.SolderPaste 0
+Ne 0 ""
+Po 0 -3.937
+$EndPAD
+$PAD
+Sh "COM1" R 2.286 1.27 0 0 900
+At SMD N 00888000
+.SolderMask 0.2
+.SolderPaste 0
+Ne 0 ""
+Po 3.048 -3.937
+$EndPAD
+$PAD
+Sh "Hole" C 1.27 1.27 0 0 0
+Dr 1.27 0 0
+At HOLE N 0
+Po -4.953 0
+$EndPAD
+$EndMODULE SUNTECH_ST-PJ-312

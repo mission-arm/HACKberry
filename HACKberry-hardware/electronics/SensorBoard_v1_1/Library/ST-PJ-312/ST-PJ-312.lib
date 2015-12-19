@@ -1,0 +1,30 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2015 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# ST-PJ-312
+#
+DEF ST-PJ-312 J 0 40 Y Y 1 L N
+F0 "J" -900 0 50 H V L CNN
+F1 "ST-PJ-312" -900 -100 50 H V L CNN
+F2 "SUNTECH_ST-PJ-312" 0 0 50 H I L CNN
+DRAW
+P 2 0 0 10 -550 200 500 200 N
+P 2 0 0 10 500 200 500 150 N
+P 2 0 0 10 500 150 600 150 N
+P 2 0 0 10 600 150 600 -150 N
+P 2 0 0 10 600 -150 500 -150 N
+P 2 0 0 10 500 -150 500 -200 N
+P 2 0 0 10 500 -200 -550 -200 N
+P 2 0 0 10 -550 -200 -550 200 N
+X COM1 COM1 350 400 200 D 40 40 0 0 B 
+X R R 150 400 200 D 40 40 0 0 B 
+X RS RS -350 400 200 D 40 40 0 0 B 
+X LS LS -450 -400 200 U 40 40 0 0 B 
+X L L -250 -400 200 U 40 40 0 0 B 
+X COM2 COM2 450 -400 200 U 40 40 0 0 B 
+ENDDRAW
+ENDDEF
+#
+# End Library
