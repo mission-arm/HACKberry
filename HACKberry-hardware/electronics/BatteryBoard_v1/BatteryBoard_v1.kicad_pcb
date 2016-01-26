@@ -3,7 +3,7 @@
   (general
     (links 0)
     (no_connects 0)
-    (area 226.170999 130.341 234.810001 152.811101)
+    (area 199.924999 133.971 231.171002 158.575001)
     (thickness 1.6)
     (drawings 17)
     (tracks 4)
@@ -20,9 +20,9 @@
     (33 F.Adhes user hide)
     (34 B.Paste user hide)
     (35 F.Paste user hide)
-    (36 B.SilkS user hide)
+    (36 B.SilkS user)
     (37 F.SilkS user)
-    (38 B.Mask user hide)
+    (38 B.Mask user)
     (39 F.Mask user)
     (40 Dwgs.User user hide)
     (41 Cmts.User user hide)
@@ -32,7 +32,7 @@
   )
 
   (setup
-    (last_trace_width 1)
+    (last_trace_width 0.254)
     (user_trace_width 1)
     (user_trace_width 2.5)
     (trace_clearance 0.254)
@@ -68,7 +68,7 @@
       (plotframeref false)
       (viasonmask false)
       (mode 1)
-      (useauxorigin true)
+      (useauxorigin false)
       (hpglpennumber 1)
       (hpglpenspeed 20)
       (hpglpendiameter 15)
@@ -84,7 +84,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory 151221BatteryBoard_v1_03/))
+      (outputdirectory 160111BatteryBoard_v1_05/))
   )
 
   (net 0 "")
@@ -170,8 +170,8 @@
     )
   )
 
-  (gr_text exiii (at 215.7 155.8) (layer F.Mask)
-    (effects (font (size 1.5 1.5) (thickness 0.3)))
+  (gr_text BatteryBoard_v1 (at 218.9 156.9) (layer F.Mask)
+    (effects (font (size 1.5 1.5) (thickness 0.3)) (justify right))
   )
   (gr_text - (at 216.1 151.4) (layer F.Mask)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
