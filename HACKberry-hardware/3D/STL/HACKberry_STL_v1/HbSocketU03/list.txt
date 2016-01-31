@@ -1,0 +1,7 @@
+HbBatteryCase04.stl
+HbBatteryDoorA03.stl
+HbBatteryDoorB03.stl
+HbBatteryDoorShaft03.stl
+HbBatteryLockKnob01.stl
+HbMainFrameA03.stl
+HbMainFrameB03.stl
