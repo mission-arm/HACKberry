@@ -43,7 +43,7 @@ The data for the hardwares of HACKberry is released under the following licenses
 ##5. Trademark and Other Contents
 5.1. The following trademark is under procedure of application for trademark.  
 Trademark: exiii  
-Application number: 2015-27269  
+Registration number: 5786270  
 
 5.2. The “Intellectual Property Rights” (hereinafter used to refer to any rights already owned or to obtain or apply for registration of such rights) which includes copyright (including the rights specified in articles 27, 28 and other articles of the Japanese Copyright Act; the same apply hereinafter), patent rights, utility model rights, design rights, trademark rights, and other intellectual  property rights in and to the trademarks and other contents of the Company are owned by the Company unless the Policy stipulates otherwise.
 
@@ -119,7 +119,7 @@ HACKberryに関するハードウェアに関する各データは、以下の�
 ##5. 商標等およびコンテンツ
 5.1. 以下の商標は、当社が日本において出願中の商標です。  
 商標：exiii  
-商願：2015-27269
+登録番号：5786270
 
 5.2. 本ポリシーに特に定めがない限り、exiiiに関する商標等およびコンテンツについて、著作権（著作権法第27条および第28条の権利その他の権利を含みます。以下、同様とします。）、特許権、実用新案権、意匠権、商標権等の知的財産権（それらの権利を取得し、またはそれらの権利につき登録等を出願する権利も含むものとします。以下、総称して「知的財産権」といいます。）その他一切の権利は、当社に帰属します。
 
@@ -157,3 +157,4 @@ HACKberryに関するハードウェアに関する各データは、以下の�
 イクシー株式会社  
 2015年5月25日制定  
 2015年7月20日改訂  
+2016年2月2日改訂  
