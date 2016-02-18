@@ -1,2 +1,3 @@
 (fp_lib_table
+  (lib (name HACKberry_v1)(type KiCad)(uri D:\exiii\HACKberry\HACKberry-hardware\electronics\HACKberry_v1.pretty)(options "")(descr ""))
 )
