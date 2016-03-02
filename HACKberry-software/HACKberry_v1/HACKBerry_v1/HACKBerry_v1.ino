@@ -12,7 +12,7 @@ Servo myservo1; //controls middle finger, ring finger and pinky
 Servo myservo2; //controls thumb
 
 float target = 0;
-boolean thumbPinState = 1;
+boolean thumbPinState = 0;
 boolean fingerPinState = 1;
 
 int count = 0;
@@ -40,7 +40,7 @@ int positionMin = 0;
 int position =0;
 int prePosition = 0;
 
-int thumbPinch = 70;  
+int thumbPinch = 60;  
 int thumbOpen = 153;
 
 
