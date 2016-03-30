@@ -1,3 +1,19 @@
+/*
+キャリブレーションテストプログラム03
+ 小笠原佑樹
+ 2015/11/19
+ 
+ ＠プロセス
+ キャリブレーションボタンを押す
+ ↓
+ 500ms待機
+ ↓
+ 4500msセンサの取得値と指の動作速度を比例させてキャリブレーションを継続
+ ↓
+ キャリブレーション脱出。通常動作。
+ */
+
+
 #include <Servo.h>
 
 //Micro
@@ -12,7 +28,7 @@ Servo myservo1; //controls middle finger, ring finger and pinky
 Servo myservo2; //controls thumb
 
 float target = 0;
-boolean thumbPinState = 0;
+boolean thumbPinState = 1;
 boolean fingerPinState = 1;
 
 int count = 0;
@@ -40,15 +56,15 @@ int positionMin = 0;
 int position =0;
 int prePosition = 0;
 
-int thumbPinch = 60;  
-int thumbOpen = 153;
+int thumbPinch = 64;  
+int thumbOpen = 158;
 
 
-int indexMin = 170;//extend
+int indexMin = 166;//extend
 int indexMax = 0;//flex
 
-int middleMin = 110;//extend 
-int middleMax = 40;//flex
+int middleMin = 100;//extend 
+int middleMax = 15;//flex
 
 int thumbPos = 90;
 int indexPos = 90;
@@ -75,11 +91,24 @@ void setup() {
 
 }
 
-void loop() { 
+void loop() {
 
-  
 
-  while(1)  {
+  //===============小笠原追加====================
+  while(1) {
+    myservo0.write(indexMin);  //indexサーボを初期位置にする。
+    myservo1.write(middleMin);  //middleサーボを初期位置にする。
+    myservo2.write(thumbOpen);  //Thumb open
+    Serial.println("Waiting for Calibration...");
+    delay(10);
+    if(digitalRead(calibPin0) == LOW) {
+      calibration();
+      break;
+    }
+  }
+  //===========================================
+
+  while(1) {
 
     sensorValue = ReadSens_and_Condition();
     delay(25);
@@ -95,7 +124,7 @@ void loop() {
       swCount0 = 0;
       //sensorMax = ReadSens_and_Condition();  
       calibration();
-  
+
     }
 
     if(digitalRead(calibPin1) == LOW){//A5
@@ -185,11 +214,14 @@ void loop() {
 
     myservo0.write(indexPos);
 
+
+    //三指のスイッチ・オン状態だったらサーボを動かす。それ以外は動かない。
     if(fingerPinState == HIGH){
       middlePos=map(position,positionMin,positionMax,middleMin, middleMax);
       myservo1.write(middlePos);
     }
 
+    //親指の駆動
     switch(thumbPinState){
     case 0://pinch
       myservo2.write(thumbPinch);
@@ -202,13 +234,13 @@ void loop() {
     }
   }
 }
-
 //センサ読み取り
-int ReadSens_and_Condition(){
+int ReadSens_and_Condition() {
   int i;
   int sval;
   for(i= 0; i<20; i++){
-    sval = sval + analogRead(analogInPin0);
+//    sval = sval + analogRead(analogInPin0); for other SensorVoard 
+    sval = sval + abs(1023-analogRead(analogInPin0)); //for SensorBoard_v1_1
   }
   sval = sval/20;
   return sval;
@@ -217,43 +249,69 @@ int ReadSens_and_Condition(){
 
 
 
+
 //=================================以下小笠原追加===================================
+
+int sensorMin_temp;
 
 void calibration() {
 
-  myservo0.write(indexMax);  //indexサーボを初期位置にする。
+  myservo0.write(indexMin);  //indexサーボを初期位置にする。
   myservo1.write(middleMax);  //middleサーボを初期位置にする。
+  myservo2.write(thumbOpen);  //Thumb open
 
-  Serial.println("please wait...");
-  delay(1500);
+    Serial.println("please wait...");
+  delay(500);
   Serial.println("start");
 
   sensorMin = ReadSens_and_Condition();
-  sensorMax = ReadSens_and_Condition();
+  sensorMax = sensorMin+1;
 
   unsigned long time = millis();
 
-  while( millis() < time+5000 ) {
+  while( millis() < time+7500 ) {
 
     //距離を取得
-    int val = ReadSens_and_Condition();
+    sensorValue = ReadSens_and_Condition();
+    delay(25);
 
     //最大値最小値の更新
-    if( val <= sensorMin )sensorMin = val;
-    else if( val > sensorMax )sensorMax = val;
+    if( sensorValue < sensorMin ) {
+      sensorMin = sensorValue;
+      sensorMin_temp = sensorMin + (sensorMax-sensorMin)/4;
+    }
+    else if( sensorValue > sensorMax )sensorMax = sensorValue;
+    else;
 
-    indexPos=map(val,sensorMin,sensorMax,indexMin, indexMax);
+    //calculate speed
+    if(sensorValue < (sensorMin_temp+(sensorMax-sensorMin)/8)){
+      speed = speedReverse;
+    }
+    else if(sensorValue < (sensorMin_temp+(sensorMax-sensorMin)/4)){
+      speed = 0;
+    }
+    else{
+      speed = map(sensorValue, sensorMin_temp, sensorMax, speedMin, speedMax);
+    }
+
+    //calculate position
+    position = prePosition + speed;
+    if(position < positionMin) position = positionMin;
+    if(position > positionMax) position = positionMax;
+    prePosition = position;
+    //motor
+    indexPos=map(position,positionMin,positionMax,indexMin, indexMax);
     myservo0.write(indexPos);
 
-    middlePos=map(val,sensorMin,sensorMax,middleMin, middleMax);
-    myservo1.write(middlePos);
-    
+
     Serial.print("Min=");
     Serial.print(sensorMin);
+    Serial.print(",Min_temp=");
+    Serial.print(sensorMin_temp);
     Serial.print(",Max=");
     Serial.print(sensorMax);
     Serial.print(",Value=");
-    Serial.print(val);
+    Serial.print(sensorValue);
     Serial.print(",time=");
     Serial.print(time);
     Serial.print(",millis=");
@@ -262,13 +320,22 @@ void calibration() {
     Serial.println(digitalRead(calibPin0));
 
 
-    delay(20);
   }
-
   sensorMin += (sensorMax-sensorMin)/4;
-  //sensorMax -= (sensorMax-sensorMin)/8;
-  //delay(1500);
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
