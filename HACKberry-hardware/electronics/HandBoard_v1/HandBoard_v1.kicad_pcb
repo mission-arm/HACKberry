@@ -5,7 +5,7 @@
     (no_connects 3)
     (area 95.268 66.530187 157.666101 142.916076)
     (thickness 1.6)
-    (drawings 55)
+    (drawings 57)
     (tracks 159)
     (zones 0)
     (modules 12)
@@ -505,6 +505,8 @@
     )
   )
 
+  (gr_circle (center 148.5711 125.4336) (end 149.1211 126.1336) (layer Edge.Cuts) (width 0.1))
+  (gr_circle (center 148.5711 118.4336) (end 149.3711 118.8836) (layer Edge.Cuts) (width 0.1))
   (gr_text HandBoard_v1 (at 120.1711 127.3836) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify left))
   )

@@ -56,7 +56,7 @@ int positionMin = 0;
 int position =0;
 int prePosition = 0;
 
-int thumbPinch = 64;  
+int thumbPinch = 60;  
 int thumbOpen = 158;
 
 
