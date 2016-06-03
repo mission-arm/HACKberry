@@ -3,7 +3,7 @@
   (general
     (links 23)
     (no_connects 1)
-    (area 64.103099 63.283599 199.847958 154.678413)
+    (area 95.3061 68.711552 159.4021 154.678413)
     (thickness 1.6)
     (drawings 55)
     (tracks 181)
@@ -93,7 +93,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory 160111HandBoard_v1_2/))
+      (outputdirectory 160229HandBoard_v1_2/))
   )
 
   (net 0 "")
