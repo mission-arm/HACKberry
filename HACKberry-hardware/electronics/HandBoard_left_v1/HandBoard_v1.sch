@@ -91,7 +91,6 @@ NoConn ~ 4750 4800
 NoConn ~ 4750 4600
 NoConn ~ 4750 4400
 NoConn ~ 4750 4300
-NoConn ~ 4750 3700
 NoConn ~ 4750 3600
 NoConn ~ 4750 3300
 NoConn ~ 4750 3200
@@ -206,8 +205,6 @@ Wire Wire Line
 	3550 5200 3800 5200
 NoConn ~ 3300 5200
 Wire Wire Line
-	3500 4700 4750 4700
-Wire Wire Line
 	3500 4600 4550 4600
 Wire Wire Line
 	4550 4600 4550 4500
@@ -247,7 +244,7 @@ U 1 1 55C499A9
 P 5550 5400
 F 0 "U3" H 5550 5650 60  0000 C CNN
 F 1 "Seed_Studio_Adjustable_DC/DC_Power_Converter_(1.25V_-_35V/3A)" H 5600 5150 60  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x02" H 5600 5150 60  0001 C CNN
+F 2 "HACKberry_v1:Pin_Header_Straight_2x02_Left_DCDC" H 5600 5150 60  0001 C CNN
 F 3 "" H 5600 5150 60  0000 C CNN
 	1    5550 5400
 	1    0    0    -1  
@@ -331,4 +328,11 @@ SW_OPEN
 Wire Wire Line
 	6600 4700 6250 4700
 NoConn ~ 6250 4100
+Wire Wire Line
+	3500 4700 4450 4700
+Wire Wire Line
+	4450 4700 4450 3700
+Wire Wire Line
+	4450 3700 4750 3700
+NoConn ~ 4750 4700
 $EndSCHEMATC
