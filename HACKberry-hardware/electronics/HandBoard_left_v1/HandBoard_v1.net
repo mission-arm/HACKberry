@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:/Users/yoshida/Documents/exiii/HACKberry/HACKberry-hardware/electronics/HandBoard_left_v1/HandBoard_v1.sch)
-    (date "2016/06/03 22:31:02")
+    (date "2016/06/06 21:05:24")
     (tool "Eeschema 4.0.1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -53,7 +53,7 @@
       (tstamp 55C49688))
     (comp (ref U3)
       (value "Seed_Studio_Adjustable_DC/DC_Power_Converter_(1.25V_-_35V/3A)")
-      (footprint Pin_Headers:Pin_Header_Straight_2x02)
+      (footprint HACKberry_v1:Pin_Header_Straight_2x02_Left_DCDC)
       (libsource (lib HandBoard_v1-cache) (part "Seed_Studio_Adjustable_DC/DC_Power_Converter_(1.25V_-_35V/3A)"))
       (sheetpath (names /) (tstamps /))
       (tstamp 55C499A9))
