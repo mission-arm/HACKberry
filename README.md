@@ -4,6 +4,11 @@ Hackberries, which are a species of trees included in the elm family, grow many 
 Our goal is to develop an artificial arm that would become the platform upon which developers and artificial arm users from all over the world are able to build as they wish.  
 The name represents our vision to “hack” at problems, grow branches of joy that reach out to users and enable their ideas and efforts to bear fruit (“berries”).
 
+"HACKberry" provides dual licenses system for Users: one is for non-profit use under this Policy, and the other is for exceptional use (including commercial use).
+
+Contents uploaded to the Exiii forum or GitHub may not only be used for development of HACKberry and may not be limited to just Creative Commons Licenses, and may be distributed by Exiii under a proprietary closed license, regardless of whether the content is program code, bug reports, opinions, ideas, etc. and regardless of the circumstances in which it was uploaded or whether it will be used for profit or not.
+
+
 # HACKberry Open Source Project Policy
 
 This policy (“Policy”) of “HACKberry Open Source Project” ( “Project”) sets forth the scope and the terms and conditions of the provision of the source codes and data etc. regarding “HACKberry” by Exiii Inc. (“Company”).
@@ -21,19 +26,25 @@ This policy (“Policy”) of “HACKberry Open Source Project” ( “Project�
 ##2. Source Codes for Software
 The source codes for the software of HACKberry are released under the following licenses.
 
+Please inquire to the following contact to use the source code under exceptional conditions(commercial use, etc.).
+[info@exiii.jp](mailto:info@exiii.jp)
+
 |source codes|licenses|  
 |:-:|:-:|  
 |2.1. Arduino Sketch (the source code for Arduino Micro built into the artificial arms)|[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)|
 
 ##3. Data for Hardware
-The data for the hardwares of HACKberry is released under the following licenses.  
+The data for the hardwares of HACKberry is released under the following licenses.
+
+Please inquire to the following contact to use the data under exceptional conditions(commercial use, etc.).
+[info@exiii.jp](mailto:info@exiii.jp)
 
 |Data|licenses|  
 |:-:|:-:|  
-|3.1. 3D data (the configuration data for each of the parts used in the artificial arms)|[Creative Commons License BY-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)|
-|3.2. Hand substrates data (the data for circuit substrates connecting microcontroller boards, motors, sensors and batteries)|[Creative Commons License BY-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)|
-|3.3. Sensor substrates data (the data for circuit substrates used to fix reflection type photosensors that detect ridges in muscle tissue)|[Creative Commons License BY-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)|
-|3.4. Battery substrates data (the data for circuit substrates built into battery boxes)|[Creative Commons License BY-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)|
+|3.1. 3D data (the configuration data for each of the parts used in the artificial arms)|[Creative Commons License BY-NC-SA 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)|
+|3.2. Hand substrates data (the data for circuit substrates connecting microcontroller boards, motors, sensors and batteries)|[Creative Commons License BY-NC-SA 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)|
+|3.3. Sensor substrates data (the data for circuit substrates used to fix reflection type photosensors that detect ridges in muscle tissue)|[Creative Commons License BY-NC-SA 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)|
+|3.4. Battery substrates data (the data for circuit substrates built into battery boxes)|[Creative Commons License BY-NC-SA 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)|
 
 ##4. Patents
 4.1. The Company grants Users a free-of-charge, non-exclusive, non-transferable and non-sub-licensable license(without any restriction of territory or time) to use the Company’s inventions (including registered patent inventions and pending patent inventions) provided that (i)such usage is necessary for Users to make artificial arms by using the source codes and the data in accordance with the licenses provided under sections 2 and 3 and (ii) such usage is not in violation of section 1.2.
@@ -41,15 +52,21 @@ The data for the hardwares of HACKberry is released under the following licenses
 4.2. The inventions referred to in the preceding section 4.1. includes the invention regarding the joint mechanism that enables artificial arms to operate similarly to human arms with a simple conformation.Presently, the invention  is patent pending, however, the Company will update the details of the invention through appropriate methods (including revision of the Policy, notification on the forum on this website and etc.) according to the development in the patent application.
 
 ##5. Trademark and Other Contents
-5.1. The following trademark is under procedure of application for trademark.  
+5.1. The following trademark is registered.  
 Trademark: exiii  
 Registration number: 5786270  
 
-5.2. The “Intellectual Property Rights” (hereinafter used to refer to any rights already owned or to obtain or apply for registration of such rights) which includes copyright (including the rights specified in articles 27, 28 and other articles of the Japanese Copyright Act; the same apply hereinafter), patent rights, utility model rights, design rights, trademark rights, and other intellectual  property rights in and to the trademarks and other contents of the Company are owned by the Company unless the Policy stipulates otherwise.
+5.2. The following trademark is under procedure of application.  
+Trademark: HACKberry
+Application number: 2016-042844, 2016-042845
 
-5.3. Users may not use the trademarks and other contents in any way without prior written permission by the Company.  
+5.3. The “Intellectual Property Rights” (hereinafter used to refer to any rights already owned or to obtain or apply for registration of such rights) which includes copyright (including the rights specified in articles 27, 28 and other articles of the Japanese Copyright Act; the same apply hereinafter), patent rights, utility model rights, design rights, trademark rights, and other intellectual  property rights in and to the trademarks and other contents of the Company are owned by the Company unless the Policy stipulates otherwise.
 
-5.4. To obtain the permission stipulated the preceding section 5.3., please contact the below Email address.  
+5.4. On the basis of this Policy, in the case when users publicly released source code or data that is copyrighted under copyright law and committed or uploaded to GitHub or our forum (http://exiii-hackberry.com/forums/), their copyrights shall be transferred to our Company at the time it is committed.
+
+5.5. Users may not use the trademarks and other contents in any way without prior written permission by the Company.  
+
+5.6. To obtain the permission stipulated the preceding section 5.3., please contact the below Email address.  
 [info@exiii.jp](mailto:info@exiii.jp)
 
 ##6. Superiority of the individual Licenses
@@ -80,6 +97,15 @@ In the event of discrepancy between the provisions of this Policy and the provis
 exiii Inc.  
 Prescribed on May 25th, 2015  
 Updated on July 20th, 2015
+Updated on February 2nd, 2016
+Updated on June 10th, 2016
+
+# HACKberry
+HACKberryは日常的に使えるようユーザーの声を多く取り入れた実用的な義手です。
+Hackberryとはニレ科の非常に枝を多くつける樹木です。世界中の開発者や義手ユーザーが思い思いの形に作り上げられるプラットフォームになるような義手を目指します。
+「改良（HACK）することで楽しみ方の枝葉が広がりユーザーの手に届き実(berry）を結ぶ」という思いを込めています。
+「HACKberry」は、本規約に基づく非営利利用の場合とそれ以外の場合（営利利用など）を区別してライセンスを用意しています（デュアルライセンス方式を採用）。
+exiiiのフォーラムとGitHubにアップロードされた内容は、プログラムコードに限らず、不具合報告、意見、アイディア、その他内容の如何や、営利または非営利利用を問わず、「HACKberry」の開発に利用され、Creative Commonsライセンスのみならず、exiii株式会社が独自に設定するクローズドソースライセンスの下で頒布されることがあります。
 
 # HACKberry Open Source Project Policy(Japanese)
 
@@ -95,21 +121,23 @@ Updated on July 20th, 2015
 1.2.4. 当社が上記各号に該当するおそれがあると判断する目的による使用  
 
 ##2. ソフトウェアのソースコード
-HACKberryに関するソフトウェアのソースコードは、以下のライセンスに基づき公開されます。
+HACKberryに関するソフトウェアのソースコードは、以下のライセンスに基づき公開されます。各ライセンスとは異なる条件（商用利用等）でソースコードの利用を希望する場合は、以下のアドレスまでご連絡ください。  
+[info@exiii.jp](mailto:info@exiii.jp)
+
 
 |ソースコード|ライセンス|
 |:-:|:-:|
-|2.1. Arduinoスケッチ（義手に内蔵したArduino Microに書き込むためのソースコードを意味します。）|[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)|
+|2.1. Arduinoスケッチ（義手に内蔵したArduino Microに書き込むためのソースコードを意味します。）|[GNU General Public License version 3](http://www.gnu.org/licenses/quick-guide-gplv3.en.html)|
 
 ##3. ハードウェアに関するデータ
-HACKberryに関するハードウェアに関する各データは、以下の各ライセンスまたは条件に基づき公開されます。  
+HACKberryに関するハードウェアに関する各データは、以下の各ライセンスまたは条件に基づき公開されます。 各ライセンスとは異なる条件（商用利用等）でデータの利用を希望する場合は、以下のアドレスまでご連絡ください。  [info@exiii.jp](mailto:info@exiii.jp)   
 
 |データ|ライセンス|  
 |:-:|:-:|
-|3.1. 3Dデータ（義手に使う各部品の形状データを意味します。）|[Creative Commons License BY-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)|
-|3.2. ハンド基板データ（マイコン、モーター、センサおよび電池を繋ぐための回路基板を意味します。）|[Creative Commons License BY-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)|
-|3.3. センサ基板データ（筋肉の隆起を検出するための反射型光センサ（フォトリフレクタ）を取り付けるための回路基板を意味します。）|[Creative Commons License BY-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)|
-|3.4. 電池基板データ（電池ボックスに内蔵する回路基板を意味します。）|[Creative Commons License BY-SA 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)|
+|3.1. 3Dデータ（義手に使う各部品の形状データを意味します。）|[Creative Commons License BY-NC-SA 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)|
+|3.2. ハンド基板データ（マイコン、モーター、センサおよび電池を繋ぐための回路基板を意味します。）|[Creative Commons License BY-NC-SA 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)|
+|3.3. センサ基板データ（筋肉の隆起を検出するための反射型光センサ（フォトリフレクタ）を取り付けるための回路基板を意味します。）|[Creative Commons License BY-NC-SA 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)|
+|3.4. 電池基板データ（電池ボックスに内蔵する回路基板を意味します。）|[Creative Commons License BY-NC-SA 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)|
 
 ##4. 特許
 4.1. 当社は、ユーザーに対し、2.および3.に定めたライセンスに基づいてソースコードまたはデータを利用して義手を制作するに当たって必要な範囲であってかつ1.2.に違反しない場合に限り、当社が特許出願中または特許登録済みの発明を実施することを、無償で、地域または期間の限定なく、非独占的に許諾（再許諾は除きます。）します。
@@ -117,15 +145,21 @@ HACKberryに関するハードウェアに関する各データは、以下の�
 4.2. 4.1.に定める発明は、関節機構に関するものであって、簡単な構造で人間の手の動作に近い動作を実現可能とするものです。現在特許出願中ですが、出願手続の進展に応じて、発明の特定に関する情報を本ポリシーまたはフォーラム等において適切な方法により告知します。
 
 ##5. 商標等およびコンテンツ
-5.1. 以下の商標は、当社が日本において出願中の商標です。  
+5.1. 以下の商標は、当社が日本において登録済の商標です。  
 商標：exiii  
 登録番号：5786270
 
-5.2. 本ポリシーに特に定めがない限り、exiiiに関する商標等およびコンテンツについて、著作権（著作権法第27条および第28条の権利その他の権利を含みます。以下、同様とします。）、特許権、実用新案権、意匠権、商標権等の知的財産権（それらの権利を取得し、またはそれらの権利につき登録等を出願する権利も含むものとします。以下、総称して「知的財産権」といいます。）その他一切の権利は、当社に帰属します。
+5.2. 以下の商標は、当社が日本において出願中の商標です。  
+商標：HACKberry  
+登録番号：2016-042844, 2016-042845
 
-5.3. 商標等およびコンテンツは、当社の事前の書面による許諾を得ない限り、いかなる利用もしてはなりません。
+5.3. 本ポリシーに特に定めがない限り、exiiiに関する商標等およびコンテンツについて、著作権（著作権法第27条および第28条の権利その他の権利を含みます。以下、同様とします。）、特許権、実用新案権、意匠権、商標権等の知的財産権（それらの権利を取得し、またはそれらの権利につき登録等を出願する権利も含むものとします。以下、総称して「知的財産権」といいます。）その他一切の権利は、当社に帰属します。
 
-5.4. 商標等またはコンテンツの利用を希望する場合は、以下のアドレスまでご連絡ください。  
+5.4. ユーザーが本ポリシーに基づいて公開されたソースコードおよびデータに関し、GitHubまたはフォーラム（http://exiii-hackberry.com/forums/）上でコミットまたはアップロードした場合、その内容が著作権法上の著作物であるときには、コミットと同時に、ユーザーの著作権は当社に移転します。また、この場合、ユーザーは、当社または当社が許諾する第三者に対し、著作者人格権を行使しないものとします。
+
+5.5. 商標等およびコンテンツは、当社の事前の書面による許諾を得ない限り、いかなる利用もしてはなりません。
+
+5.6. 商標等またはコンテンツの利用を希望する場合は、以下のアドレスまでご連絡ください。  
 [info@exiii.jp](mailto:info@exiii.jp)
 
 ##6. 個別のライセンスの優先
@@ -157,4 +191,5 @@ HACKberryに関するハードウェアに関する各データは、以下の�
 イクシー株式会社  
 2015年5月25日制定  
 2015年7月20日改訂  
-2016年2月2日改訂  
+2016年2月2日改訂
+2016年6月10日改訂
