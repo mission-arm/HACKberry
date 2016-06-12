@@ -31,7 +31,7 @@ Please inquire to the following contact to use the source code under exceptional
 
 |source codes|licenses|  
 |:-:|:-:|  
-|2.1. Arduino Sketch (the source code for Arduino Micro built into the artificial arms)|[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)|
+|2.1. Arduino Sketch (the source code for Arduino Micro built into the artificial arms)|[GNU General Public License version 3](http://www.gnu.org/licenses/quick-guide-gplv3.en.html)|
 
 ##3. Data for Hardware
 The data for the hardwares of HACKberry is released under the following licenses.
