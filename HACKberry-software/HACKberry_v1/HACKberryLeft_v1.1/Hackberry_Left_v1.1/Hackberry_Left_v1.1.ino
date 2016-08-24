@@ -1,26 +1,16 @@
 /*
-キャリブレーションテストプログラム03
+ 左手PCB基板用修正ピン設定プログラム
  小笠原佑樹
- 2015/11/19
- 
- ＠プロセス
- キャリブレーションボタンを押す
- ↓
- 500ms待機
- ↓
- 4500msセンサの取得値と指の動作速度を比例させてキャリブレーションを継続
- ↓
- キャリブレーション脱出。通常動作。
- */
-
+ 2016/8/9
+*/
 
 #include <Servo.h>
 
 //Micro
-const int calibPin0 =  A6; //set the MAX value of the sensor input
-const int calibPin1 =  A5; //set the MIN value of the sensor input
-const int thumbPin =  A4; //change the thumb position among three preset values
-const int fingerPin =  A3; //lock or unlock the position of middle finger, ring finger and pinky
+const int calibPin0 =  11; //set the MAX value of the sensor input
+const int calibPin1 =  10; //set the MIN value of the sensor input
+const int thumbPin =  8; //change the thumb position among three preset values
+const int fingerPin =  7; //lock or unlock the position of middle finger, ring finger and pinky
 const int analogInPin0 = A0; //sensor input
 
 Servo myservo0; //controls index finger
