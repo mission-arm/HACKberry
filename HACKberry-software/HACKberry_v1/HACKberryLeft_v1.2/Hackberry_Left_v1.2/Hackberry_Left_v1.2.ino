@@ -1,9 +1,12 @@
-/*
- 左手PCB基板用修正ピン設定プログラム
- 小笠原佑樹
- 2016/8/9
-*/
+/*---------------------------------------------
+  HACKberry Left Operation Program
+  exiii Inc. / Yuki Ogasawara
+  Latest update：2016/12/29
 
+  Board:Arduino/Genuino Micro
+  Programmer:AVRISP mkⅡ
+  ---------------------------------------------*/
+  
 #include <Servo.h>
 
 //Micro
@@ -46,15 +49,15 @@ int positionMin = 0;
 int position =0;
 int prePosition = 0;
 
-int thumbPinch = 118;  
-int thumbOpen = 50;
+int thumbPinch = 159;  //
+int thumbOpen = 64;//64
 
 
-int indexMin = 7;//extend
+int indexMin = 40;//extend40
 int indexMax = 170;//flex
 
-int middleMin = 40;//extend 
-int middleMax = 110;//flex
+int middleMin = 55;//extend 55
+int middleMax = 128;//flex
 
 int thumbPos = 90;
 int indexPos = 90;
@@ -200,14 +203,14 @@ void loop() {
     if(position > positionMax) position = positionMax;
     prePosition = position;
     //motor
-    indexPos=map(position,positionMin,positionMax,indexMin, indexMax);
+    indexPos=map(position,positionMin,positionMax,indexMax, indexMin);
 
     myservo0.write(indexPos);
 
 
     //三指のスイッチ・オン状態だったらサーボを動かす。それ以外は動かない。
     if(fingerPinState == HIGH){
-      middlePos=map(position,positionMin,positionMax,middleMin, middleMax);
+      middlePos=map(position,positionMin,positionMax,middleMax, middleMin);
       myservo1.write(middlePos);
     }
 
@@ -289,7 +292,7 @@ void calibration() {
     if(position > positionMax) position = positionMax;
     prePosition = position;
     //motor
-    indexPos=map(position,positionMin,positionMax,indexMin, indexMax);
+    indexPos=map(position,positionMin,positionMax,indexMax, indexMin);
     myservo0.write(indexPos);
 
 
@@ -312,19 +315,3 @@ void calibration() {
   }
   sensorMin += (sensorMax-sensorMin)/4;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
