@@ -1,0 +1,12 @@
+# SolidEdge
+*.cfg
+*.log
+
+# Inventor
+/**/OldVersions/
+/**/lockfile.lck
+
+# Windows
+/**/desktop.ini
+
+# Mac
