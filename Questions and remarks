@@ -1,0 +1,37 @@
+In order to create the EXIII hand :
+
+- We have to print 3D parts : 
+Those files can be found inside this github or there : 
+You can download STEP files from the following links.
+右手用部品 Right hand
+https://drive.google.com/file/d/0B_O4N8Ng5KyZbzVMR05IeWpVTkU/view?usp=sharing 
+As of 02/09/2017, the "big file", wether in STP ou STL version seems to show differences with the github separate pieces. 
+There were 2 pieces missing (gears for the finger).
+We (Crealab, France) have some mechanical improvements to submit, we will send them via github and then update the big files if modifications are OK
+We might need modification rights to do so.
+The names of the folders in "hardware/3D" are not clear. Are them even in use beside STL/HACKberry_STL_v1 ?
+
+- We have to buy other components.
+Please only use the file on gdoc, as it seems more up-to-date than the other .xlsx. Can you delete the other link that is visible on this page :
+http://exiii-hackberry.com/dw/doku.php?id=how_to_order and also delete and replace it on github with a link to the gdoc ? (but you might want to check if gdoc is complete)
+Also, beside France, it could be interesting to create 1 page for each country.
+
+- We have to buy PCBS. Tutorial here : https://docs.google.com/document/d/1lNPcouGmjLMe7-bAQ6hxlp5movhy_fizSsHiVVOBsjk/edit
+Tried from seeedstudio, the 02/09/2017, everything worked fine, delivery worldwide, prices are low.
+But it might be interesting to separate the PCB procedure from the 3D printing.
+Also, looks that there are tons of files in the github that are useless or might be archived.
+
+I also have improvement to submit concerning the assembly. 
+- I saw some steps that are not in the right order
+- If we set positions of the servo at the limit (mechanical stop) during mouting, could we use simple limits in the Arduino program and forget about the calibration ?
+
+This file has to be deleted in the github : ~$HACKberry_BOM_v1.xlsx
+
+Could it be interesting to rename files that concern right hand ..."_right", as all pieces for left hand have "_left" at the end ?
+Seems more coherent to me.
+
+Wouldn't it be better to just redirect from the website to the github, delete ressources from the website and put everything (tutorials, 3D files, links to gdocs, assembly procedure..., software) in the github ?
+Because all ressources are here, somewhere, but we have to travel between a not very intuitive website, with some files up to date, others not, sometimes redirecting here and there.
+
+Thanks
+Yours
