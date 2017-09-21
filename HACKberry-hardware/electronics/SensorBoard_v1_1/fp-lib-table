@@ -1,6 +1,0 @@
-(fp_lib_table
-  (lib (name SMD-RES-100R-5_-1_10W_0603_)(type Legacy)(uri "$(KIPRJMOD)\\Library\\SMD-RES-100R-5_-1_10W_0603_\\SMD-RES-100R-5_-1_10W_0603_.mod")(options "")(descr ""))
-  (lib (name SMD-RES-10K-1_-1_10W_0603_)(type Legacy)(uri "$(KIPRJMOD)\\Library\\SMD-RES-10K-1_-1_10W_0603_\\SMD-RES-10K-1_-1_10W_0603_.mod")(options "")(descr ""))
-  (lib (name ST-PJ-312)(type Legacy)(uri "$(KIPRJMOD)\\Library\\ST-PJ-312\\ST-PJ-312.mod")(options "")(descr ""))
-  (lib (name QRE1113GR)(type Legacy)(uri "$(KIPRJMOD)\\Library\\QRE1113GR\\QRE1113GR.mod")(options "")(descr ""))
-)
