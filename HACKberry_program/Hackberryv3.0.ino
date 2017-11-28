@@ -1,4 +1,4 @@
-/* 
+/*
  *  Arduino micro code for HACKberry.
  *  Origially created by exiii Inc.
  *  edited by Genta Kondo on 2017/6/11
@@ -6,26 +6,27 @@
 #include <Servo.h>
 
 //Settings
-const boolean isRight = 1;//right:1, left:0
-const int outThumbMax = 140;//right:open, left:close
-const int outIndexMax = 130;//right:open, left:close
-const int outOtherMax = 145;//right:open, left:close
-const int outThumbMin = 47;//right:close, left:open
-const int outIndexMin = 27;//right:close, left:open
-const int outOtherMin = 105;//right:close, left:open
-const int speedMax = 6;
-const int speedMin = 0;
-const int speedReverse = -3;
-const int thSpeedReverse = 15;//0-100
-const int thSpeedZero = 30;//0-100
-const boolean onSerial = 1;
+const char Serialnum = "";
+const boolean isRight = ;//right:1, left:0
+const int outThumbMax = ;//right:open, left:close
+const int outIndexMax = ;//right:open, left:close
+const int outOtherMax = ;//right:open, left:close
+const int outThumbMin = ;//right:close, left:open
+const int outIndexMin = ;//right:close, left:open
+const int outOtherMin = ;//right:close, left:open
+const int speedMax = ;
+const int speedMin = ;
+const int speedReverse = ;
+const int thSpeedReverse = ;//0-100
+const int thSpeedZero = ;//0-100
+const boolean onSerial = ;
 
 //Hardware
 Servo servoIndex; //index finger
 Servo servoOther; //other three fingers
 Servo servoThumb; //thumb
 int pinCalib; //start calibration
-//int pinTBD;
+int pinGrasp; // change grasp mode
 int pinThumb; // open/close thumb
 int pinOther; //lock/unlock other three fingers
 int pinSensor = A0; //sensor input
@@ -33,6 +34,7 @@ int pinSensor = A0; //sensor input
 //Software
 boolean isThumbOpen = 1;
 boolean isOtherLock = 0;
+boolean isGrasp = 1;
 int swCount0,swCount1,swCount2,swCount3 = 0;
 int sensorValue = 0; // value read from the sensor
 int sensorMax = 700;
@@ -49,7 +51,7 @@ void setup() {
   Serial.begin(9600);
   if(isRight){
     pinCalib =  A6;
-    //pinTBD =  A5; 
+    pinGrasp =  A5;
     pinThumb =  A4;
     pinOther =  A3;
     outThumbOpen=outThumbMax; outThumbClose=outThumbMin;
@@ -58,7 +60,7 @@ void setup() {
   }
   else{
     pinCalib =  11;
-    //pinTBD =  10; 
+    pinGrasp =  10;
     pinThumb =  8;
     pinOther =  7;
     outThumbOpen=outThumbMin; outThumbClose=outThumbMax;
@@ -70,8 +72,8 @@ void setup() {
   servoThumb.attach(6);//thumb
   pinMode(pinCalib, INPUT);//A6
   digitalWrite(pinCalib, HIGH);
-  //pinMode(pinTBD, INPUT);//A5
-  //digitalWrite(pinTBD, HIGH);
+  pinMode(pinGrasp, INPUT);//A5
+  digitalWrite(pinGrasp, HIGH);
   pinMode(pinThumb, INPUT);//A4
   digitalWrite(pinThumb, HIGH);
   pinMode(pinOther, INPUT);//A3
@@ -91,16 +93,24 @@ void loop() {
       calibration();
       break;
     }
-  } 
+  }
  //==control==
   position = positionMin;
   prePosition = positionMin;
   while (1) {
+    // ==Read Switch State==
     if (digitalRead(pinCalib) == LOW) swCount0 += 1;
     else swCount0 = 0;
     if (swCount0 == 10) {
       swCount0 = 0;
       calibration();
+    }
+    if (digitalRead(pinGrasp) == LOW) swCount1 += 1;
+    else swCount1 = 0;
+    if (swCount1 == 10) {
+      swCount1 = 0;
+      isGrasp = !isGrasp;
+      while (digitalRead(pinGrasp) == LOW) delay(1);
     }
     if (digitalRead(pinThumb) == LOW) swCount2 += 1;
     else swCount2 = 0;
@@ -116,23 +126,35 @@ void loop() {
       isOtherLock = !isOtherLock;
       while (digitalRead(pinOther) == LOW) delay(1);
     }
-    
+
+    // ==Read Sensor Value==
     sensorValue = readSensor();
     delay(25);
     if(sensorValue<sensorMin) sensorValue=sensorMin;
     else if(sensorValue>sensorMax) sensorValue=sensorMax;
     sensorToPosition();
 
-    outIndex = map(position, positionMin, positionMax, outIndexOpen, outIndexClose);
-    servoIndex.write(outIndex);
+    // ==Drive servos==
+    if (isGrasp) {
+        outIndex = map(position, positionMin, positionMax, outIndexOpen, outIndexClose);
+        servoIndex.write(outIndex);
+    } else {
+        outIndex = map(position, positionMin, positionMax, outIndexClose, outIndexOpen);
+        servoIndex.write(outIndex);
+    }
     if (!isOtherLock){
-      outOther = map(position, positionMin, positionMax, outOtherOpen, outOtherClose);
-      servoOther.write(outOther);
+        if (isGrasp) {
+            outOther = map(position, positionMin, positionMax, outOtherOpen, outOtherClose);
+            servoOther.write(outOther);
+        } else {
+            outOther = map(position, positionMin, positionMax, outOtherClose, outOtherOpen);
+            servoOther.write(outOther);
+        }
     }
     if(isThumbOpen) servoThumb.write(outThumbOpen);
-    else servoThumb.write(outThumbClose);  
+    else servoThumb.write(outThumbClose);
     if(onSerial) serialMonitor();
-  } 
+  }
 }
 
 /*
@@ -163,9 +185,9 @@ void calibration() {
   servoIndex.write(outIndexOpen);
   servoOther.write(outOtherClose);
   servoThumb.write(outThumbOpen);
-  position=positionMin; 
+  position=positionMin;
   prePosition=positionMin;
-  
+
   delay(200);
   if(onSerial) Serial.println("======calibration start======");
 
@@ -177,17 +199,18 @@ void calibration() {
     delay(25);
     if ( sensorValue < sensorMin ) sensorMin = sensorValue;
     else if ( sensorValue > sensorMax )sensorMax = sensorValue;
-    
+
     sensorToPosition();
-    outIndex = map(position, positionMin, positionMax, outIndexOpen, outIndexClose);    
+    outIndex = map(position, positionMin, positionMax, outIndexOpen, outIndexClose);
     servoIndex.write(outIndex);
-    
+
     if(onSerial) serialMonitor();
   }
   if(onSerial)  Serial.println("======calibration finish======");
 }
 
 void serialMonitor(){
+  Serial.print("Serialnum="); Serial.print(Serialnum);
   Serial.print("Min="); Serial.print(sensorMin);
   Serial.print(",Max="); Serial.print(sensorMax);
   Serial.print(",sensor="); Serial.print(sensorValue);
