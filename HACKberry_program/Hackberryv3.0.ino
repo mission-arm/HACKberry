@@ -6,7 +6,7 @@
 #include <Servo.h>
 
 //Settings
-const char Serialnum = "";
+const char SerialNum[] = "";
 const boolean isRight = ;//right:1, left:0
 const int outThumbMax = ;//right:open, left:close
 const int outIndexMax = ;//right:open, left:close
@@ -210,13 +210,13 @@ void calibration() {
 }
 
 void serialMonitor(){
-  Serial.print("Serialnum="); Serial.print(Serialnum);
-  Serial.print("Min="); Serial.print(sensorMin);
-  Serial.print(",Max="); Serial.print(sensorMax);
-  Serial.print(",sensor="); Serial.print(sensorValue);
-  Serial.print(",speed="); Serial.print(speed);
-  Serial.print(",position="); Serial.print(position);
-  Serial.print(",outIndex="); Serial.print(outIndex);
-  Serial.print(",isThumbOpen="); Serial.print(isThumbOpen);
-  Serial.print(",isOtherLock="); Serial.println(isOtherLock);
+  Serial.print("S/N="); Serial.print(SerialNum);
+  Serial.print(", Min="); Serial.print(sensorMin);
+  Serial.print(", Max="); Serial.print(sensorMax);
+  Serial.print(", sensor="); Serial.print(sensorValue);
+  Serial.print(", speed="); Serial.print(speed);
+  Serial.print(", position="); Serial.print(position);
+  Serial.print(", outIndex="); Serial.print(outIndex);
+  Serial.print(", isThumbOpen="); Serial.print(isThumbOpen);
+  Serial.print(", isOtherLock="); Serial.println(isOtherLock);
 }
