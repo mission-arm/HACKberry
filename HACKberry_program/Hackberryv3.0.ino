@@ -8,6 +8,7 @@
 //Settings
 const char SerialNum[] = "";
 const boolean isRight = ;//right:1, left:0
+const int boardversion = ;//mk1:1, mk2:2
 const int outThumbMax = ;//right:open, left:close
 const int outIndexMax = ;//right:open, left:close
 const int outOtherMax = ;//right:open, left:close
@@ -26,10 +27,13 @@ Servo servoIndex; //index finger
 Servo servoOther; //other three fingers
 Servo servoThumb; //thumb
 int pinCalib; //start calibration
-int pinGrasp; // change grasp mode
-int pinThumb; // open/close thumb
+int pinGrasp; //change grasp mode
+int pinThumb; //open/close thumb
 int pinOther; //lock/unlock other three fingers
-int pinSensor = A0; //sensor input
+int pinSensor; //sensor input
+int pinServoIndex; //index servo pin
+int pinServoOTher; //other servo pin
+int pinServoThumb; //thumb servo pin
 
 //Software
 boolean isThumbOpen = 1;
@@ -49,27 +53,60 @@ int outThumbOpen,outThumbClose,outIndexOpen,outIndexClose,outOtherOpen,outOtherC
 
 void setup() {
   Serial.begin(9600);
-  if(isRight){
-    pinCalib =  A6;
-    pinGrasp =  A5;
-    pinThumb =  A4;
-    pinOther =  A3;
-    outThumbOpen=outThumbMax; outThumbClose=outThumbMin;
-    outIndexOpen=outIndexMax; outIndexClose=outIndexMin;
-    outOtherOpen=outOtherMax; outOtherClose=outOtherMin;
+  switch (boardversion) {
+    case 1: // mk1
+          if(isRight){
+            pinCalib =  A6;
+            pinGrasp =  A5;
+            pinThumb =  A4;
+            pinOther =  A3;
+            pinServoIndex = 3;
+            pinServoOther = 5;
+            pinServoThumb = 6;
+            pinSensor = A0;
+            outThumbOpen=outThumbMax; outThumbClose=outThumbMin;
+            outIndexOpen=outIndexMax; outIndexClose=outIndexMin;
+            outOtherOpen=outOtherMax; outOtherClose=outOtherMin;
+          }
+          else{
+            pinCalib =  11;
+            pinGrasp =  10;
+            pinThumb =  8;
+            pinOther =  7;
+            pinServoIndex = 3;
+            pinServoOther = 5;
+            pinServoThumb = 6;
+            pinSensor = A0;
+            outThumbOpen=outThumbMin; outThumbClose=outThumbMax;
+            outIndexOpen=outIndexMin; outIndexClose=outIndexMax;
+            outOtherOpen=outOtherMin; outOtherClose=outOtherMax;
+          }
+          break;
+    case 2: // mk2
+        pinCalib = A6;
+        pinTBD = A7;
+        pinThumb = A0;
+        pinOther = 10;
+        pinServoIndex = 5;
+        pinServoOther = 6;
+        pinServoThumb = 9;
+        pinSensor = A1;
+        if(isRight) {
+            outThumbOpen=outThumbMax; outThumbClose=outThumbMin;
+            outIndexOpen=outIndexMax; outIndexClose=outIndexMin;
+            outOtherOpen=outOtherMax; outOtherClose=outOtherMin;
+        } else {
+            outThumbOpen=outThumbMin; outThumbClose=outThumbMax;
+            outIndexOpen=outIndexMin; outIndexClose=outIndexMax;
+            outOtherOpen=outOtherMin; outOtherClose=outOtherMax;
+        }
+        break;
+    default:
+      delay(10000);
   }
-  else{
-    pinCalib =  11;
-    pinGrasp =  10;
-    pinThumb =  8;
-    pinOther =  7;
-    outThumbOpen=outThumbMin; outThumbClose=outThumbMax;
-    outIndexOpen=outIndexMin; outIndexClose=outIndexMax;
-    outOtherOpen=outOtherMin; outOtherClose=outOtherMax;
-  }
-  servoIndex.attach(3);//index
-  servoOther.attach(5);//other
-  servoThumb.attach(6);//thumb
+  servoIndex.attach(pinServoIndex);//index
+  servoOther.attach(pinServoOther);//other
+  servoThumb.attach(pinServoThumb);//thumb
   pinMode(pinCalib, INPUT);//A6
   digitalWrite(pinCalib, HIGH);
   pinMode(pinGrasp, INPUT);//A5
