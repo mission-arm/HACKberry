@@ -4,6 +4,7 @@
  *  edited by Genta Kondo on 2017/6/11
  */
 #include <Servo.h>
+#include <HbButton.h>
 
 //Settings
 const char SerialNum[] = "";
@@ -23,9 +24,15 @@ const int thSpeedZero = ;//0-100
 const boolean onSerial = ;
 
 //Hardware
+/// object generation
 Servo servoIndex; //index finger
 Servo servoOther; //other three fingers
 Servo servoThumb; //thumb
+HbButton buttonCalib; //calibration
+HbButton buttonGrasp; //grasp mode
+HbButton buttonThumb; //open/close thumb
+HbButton buttonOther; //lock/unlock other three fingers
+/// pin configuration
 int pinCalib; //start calibration
 int pinGrasp; //change grasp mode
 int pinThumb; //open/close thumb
@@ -81,10 +88,14 @@ void setup() {
             outIndexOpen=outIndexMin; outIndexClose=outIndexMax;
             outOtherOpen=outOtherMin; outOtherClose=outOtherMax;
           }
+          buttonCalib.attach(pinCalib,true,true);
+          buttonGrasp.attach(pinGraps,true,true);
+          buttonThumb.attach(pinThumb,true,true);
+          buttonOther.attach(pinOther,true,true);
           break;
     case 2: // mk2
         pinCalib = A6;
-        pinTBD = A7;
+        pinGrasp = A7;
         pinThumb = A0;
         pinOther = 10;
         pinServoIndex = 5;
@@ -100,21 +111,18 @@ void setup() {
             outIndexOpen=outIndexMin; outIndexClose=outIndexMax;
             outOtherOpen=outOtherMin; outOtherClose=outOtherMax;
         }
+        buttonCalib.attach(pinCalib,false,true);
+        buttonGrasp.attach(pinGraps,false,true);
+        buttonThumb.attach(pinThumb,false,true);
+        buttonOther.attach(pinOther,true,true);
         break;
     default:
       delay(10000);
   }
+
   servoIndex.attach(pinServoIndex);//index
   servoOther.attach(pinServoOther);//other
   servoThumb.attach(pinServoThumb);//thumb
-  pinMode(pinCalib, INPUT);//A6
-  digitalWrite(pinCalib, HIGH);
-  pinMode(pinGrasp, INPUT);//A5
-  digitalWrite(pinGrasp, HIGH);
-  pinMode(pinThumb, INPUT);//A4
-  digitalWrite(pinThumb, HIGH);
-  pinMode(pinOther, INPUT);//A3
-  digitalWrite(pinOther, HIGH);
 }
 
 void loop() {
@@ -126,7 +134,7 @@ void loop() {
     servoThumb.write(outThumbOpen);
     if(onSerial) serialMonitor();
     delay(10);
-    if (digitalRead(pinCalib) == LOW) {
+    if (buttonCalib.read() == LOW) {
       calibration();
       break;
     }
@@ -136,32 +144,20 @@ void loop() {
   prePosition = positionMin;
   while (1) {
     // ==Read Switch State==
-    if (digitalRead(pinCalib) == LOW) swCount0 += 1;
-    else swCount0 = 0;
-    if (swCount0 == 10) {
-      swCount0 = 0;
-      calibration();
+    if (buttonCalib.read() == LOW) {
+        calibration();
     }
-    if (digitalRead(pinGrasp) == LOW) swCount1 += 1;
-    else swCount1 = 0;
-    if (swCount1 == 10) {
-      swCount1 = 0;
-      isGrasp = !isGrasp;
-      while (digitalRead(pinGrasp) == LOW) delay(1);
+    if (buttonGrasp.read() == LOW) {
+        isGrasp = !isGrasp;
+        while (buttonGrasp.read() == LOW) delay(1);
     }
-    if (digitalRead(pinThumb) == LOW) swCount2 += 1;
-    else swCount2 = 0;
-    if (swCount2 == 10) {
-      swCount2 = 0;
-      isThumbOpen = !isThumbOpen;
-      while (digitalRead(pinThumb) == LOW) delay(1);
+    if (buttonThumb.read() == LOW) {
+        isThumbOpen = !isThumbOpen;
+        while (buttonThumb.read() == LOW) delay(1);
     }
-    if (digitalRead(pinOther) == LOW) swCount3 += 1;//A3
-    else swCount3 = 0;
-    if (swCount3 == 10) {
-      swCount3 = 0;
-      isOtherLock = !isOtherLock;
-      while (digitalRead(pinOther) == LOW) delay(1);
+    if (buttonOther.read() == LOW) {
+        isOtherLock = !isOtherLock;
+        while (buttonOther.read() == LOW) delay(1);
     }
 
     // ==Read Sensor Value==
