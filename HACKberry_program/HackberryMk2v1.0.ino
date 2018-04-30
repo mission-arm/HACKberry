@@ -6,19 +6,19 @@
 #include <Servo.h>
 
 //Settings
-const boolean isRight = 1;//right:1, left:0
-const int outThumbMax = 140;//right:open, left:close
-const int outIndexMax = 130;//right:open, left:close
-const int outOtherMax = 145;//right:open, left:close
-const int outThumbMin = 47;//right:close, left:open
-const int outIndexMin = 27;//right:close, left:open
-const int outOtherMin = 105;//right:close, left:open
+const boolean isRight = 0;//right:1, left:0
+const int outThumbMax = 95;//right:open, left:close
+const int outIndexMax = 100;//right:open, left:close
+const int outOtherMax = 75;//right:open, left:close
+const int outThumbMin = 10;//right:close, left:open
+const int outIndexMin = 0;//right:close, left:open
+const int outOtherMin = 20;//right:close, left:open
 const int speedMax = 6;
 const int speedMin = 0;
 const int speedReverse = -3;
 const int thSpeedReverse = 15;//0-100
 const int thSpeedZero = 30;//0-100
-const boolean onSerial = 1;
+const boolean onSerial = 0; // 1 is not recommended
 
 //Pin
 int pinButtonCalib; //start calibration
@@ -51,7 +51,7 @@ int outThumb,outIndex,outOther = 90;
 int outThumbOpen,outThumbClose,outIndexOpen,outIndexClose,outOtherOpen,outOtherClose;
 
 void setup() {
-    Serial.begin(9600);
+    if (onSerial)  Serial.begin(9600);
 
     // Pin Configuration
     pinButtonCalib = A6;
@@ -80,7 +80,6 @@ void setup() {
     pinMode(pinButtonTBD,   INPUT_PULLUP);
     pinMode(pinButtonThumb, INPUT_PULLUP);
     pinMode(pinButtonOther, INPUT_PULLUP);
-
 }
 
 void loop() {
@@ -150,12 +149,16 @@ void loop() {
 /*
 * functions
 */
+boolean isDigitalPin(const int pin) {
+    return (pin >= 0) && (pin <= 19) ? true : false;
+}
+
 boolean readButton(const int pin) {
-    if ( digitalPinToPort(pin) == NOT_A_PIN ) {/* pin is not a port */
-        if (analogRead(pin) > 512) return 1;
-        else return 0;
-    } else {
+    if ( isDigitalPin(pin) ) {
         return digitalRead(pin);
+    } else {
+        if (analogRead(pin) > 512) return HIGH;
+        else return LOW;
     }
 }
 
@@ -206,6 +209,7 @@ void calibration() {
         if(onSerial) serialMonitor();
     }
     if(onSerial)  Serial.println("======calibration finish======");
+    return;
 }
 
 void serialMonitor(){
