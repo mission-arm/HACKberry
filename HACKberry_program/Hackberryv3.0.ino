@@ -158,7 +158,7 @@ void loop() {
  * functions
  */
 int readSensor() {
-  int i, sval;
+  int i = 0, sval = 0;
   for (i = 0; i < 10; i++) {
     sval += analogRead(pinSensor);
   }
