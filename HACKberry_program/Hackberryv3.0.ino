@@ -20,19 +20,25 @@ const int thSpeedReverse = 15;//0-100
 const int thSpeedZero = 30;//0-100
 const boolean onSerial = 1;
 
+//pin configuration
+int pinCalib; //start calibration
+int pinExtra;
+int pinThumb; // open/close thumb
+int pinOther; //lock/unlock other three fingers
+int pinSensor; //sensor input
+int pinServoIndex;
+int pinServoOther;
+int pinServoThumb;
+
 //Hardware
 Servo servoIndex; //index finger
 Servo servoOther; //other three fingers
 Servo servoThumb; //thumb
-int pinCalib; //start calibration
-//int pinTBD;
-int pinThumb; // open/close thumb
-int pinOther; //lock/unlock other three fingers
-int pinSensor = A0; //sensor input
 
 //Software
 boolean isThumbOpen = 1;
 boolean isOtherLock = 0;
+boolean isReversed  = 0;
 int swCount0,swCount1,swCount2,swCount3 = 0;
 int sensorValue = 0; // value read from the sensor
 int sensorMax = 700;
@@ -49,33 +55,39 @@ void setup() {
   Serial.begin(9600);
   if(isRight){
     pinCalib =  A6;
-    //pinTBD =  A5; 
+    pinExtra =  A5; 
     pinThumb =  A4;
     pinOther =  A3;
+    pinSensor = A0;
+    pinServoIndex = 3;
+    pinServoOther = 5;
+    pinServoThumb = 6;
     outThumbOpen=outThumbMax; outThumbClose=outThumbMin;
     outIndexOpen=outIndexMax; outIndexClose=outIndexMin;
     outOtherOpen=outOtherMax; outOtherClose=outOtherMin;
   }
   else{
     pinCalib =  11;
-    //pinTBD =  10; 
+    pinExtra =  10; 
     pinThumb =  8;
     pinOther =  7;
+    pinSensor = A0;
+    pinServoIndex = 3;
+    pinServoOther = 5;
+    pinServoThumb = 6;
     outThumbOpen=outThumbMin; outThumbClose=outThumbMax;
     outIndexOpen=outIndexMin; outIndexClose=outIndexMax;
     outOtherOpen=outOtherMin; outOtherClose=outOtherMax;
   }
-  servoIndex.attach(3);//index
-  servoOther.attach(5);//other
-  servoThumb.attach(6);//thumb
-  pinMode(pinCalib, INPUT);//A6
-  digitalWrite(pinCalib, HIGH);
-  //pinMode(pinTBD, INPUT);//A5
-  //digitalWrite(pinTBD, HIGH);
-  pinMode(pinThumb, INPUT);//A4
-  digitalWrite(pinThumb, HIGH);
-  pinMode(pinOther, INPUT);//A3
-  digitalWrite(pinOther, HIGH);
+
+  servoIndex.attach(pinServoIndex);//index
+  servoOther.attach(pinServoOther);//other
+  servoThumb.attach(pinServoThumb);//thumb
+
+  pinMode(pinCalib, INPUT_PULLUP);
+  pinMode(pinExtra, INPUT_PULLUP);
+  pinMode(pinThumb, INPUT_PULLUP);
+  pinMode(pinOther, INPUT_PULLUP);
 }
 
 void loop() {
@@ -101,6 +113,13 @@ void loop() {
     if (swCount0 == 10) {
       swCount0 = 0;
       calibration();
+    }
+    if (digitalRead(pinExtra) == LOW) swCount1 += 1;
+    else swCount1 = 0;
+    if (swCount1 == 10) {
+      swCount1 = 0;
+      isReversed = !isReversed;
+      while (digitalRead(pinExtra) == LOW) delay(1);
     }
     if (digitalRead(pinThumb) == LOW) swCount2 += 1;
     else swCount2 = 0;
@@ -148,7 +167,12 @@ int readSensor() {
 }
 
 void sensorToPosition(){
-  int tmpVal = map(sensorValue, sensorMin, sensorMax, 100, 0);
+  int tmpVal = 0;
+  if (isReversed) {
+    tmpVal = map(sensorValue, sensorMin, sensorMax, 0, 100);
+  } else {
+    tmpVal = map(sensorValue, sensorMin, sensorMax, 100, 0);
+  }
   if(tmpVal<thSpeedReverse) speed=speedReverse;
   else if(tmpVal<thSpeedZero) speed=speedMin;
   else speed=map(tmpVal,40,100,speedMin,speedMax);
