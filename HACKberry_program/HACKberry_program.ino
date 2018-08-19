@@ -4,24 +4,24 @@
  *  edited by Genta Kondo on 2017/6/11
  */
 #include <Servo.h>
-#include <HbButton.h>
+#include "HbButton.h"
 
 //Settings
 const char SerialNum[] = "";
-const boolean isRight = ;//right:1, left:0
-const int boardversion = ;//mk1:1, mk2:2
-const int outThumbMax = ;//right:open, left:close
-const int outIndexMax = ;//right:open, left:close
-const int outOtherMax = ;//right:open, left:close
-const int outThumbMin = ;//right:close, left:open
-const int outIndexMin = ;//right:close, left:open
-const int outOtherMin = ;//right:close, left:open
-const int speedMax = ;
-const int speedMin = ;
-const int speedReverse = ;
-const int thSpeedReverse = ;//0-100
-const int thSpeedZero = ;//0-100
-const boolean onSerial = ;
+const boolean isRight = 0;//right:1, left:0
+const int boardversion = 1;//mk1:1, mk2:2
+const int outThumbMax = 140;//right:open, left:close
+const int outIndexMax = 130;//right:open, left:close
+const int outOtherMax = 145;//right:open, left:close
+const int outThumbMin = 47;//right:close, left:open
+const int outIndexMin = 27;//right:close, left:open
+const int outOtherMin = 105;//right:close, left:open
+const int speedMax = 6;
+const int speedMin = 0;
+const int speedReverse = -3;
+const int thSpeedReverse = 15;//0-100
+const int thSpeedZero = 30;//0-100
+const boolean onSerial = 1;
 
 //Hardware
 /// object generation
@@ -39,7 +39,7 @@ int pinThumb; //open/close thumb
 int pinOther; //lock/unlock other three fingers
 int pinSensor; //sensor input
 int pinServoIndex; //index servo pin
-int pinServoOTher; //other servo pin
+int pinServoOther; //other servo pin
 int pinServoThumb; //thumb servo pin
 
 //Software
@@ -89,7 +89,7 @@ void setup() {
             outOtherOpen=outOtherMin; outOtherClose=outOtherMax;
           }
           buttonCalib.attach(pinCalib,true,true);
-          buttonGrasp.attach(pinGraps,true,true);
+          buttonGrasp.attach(pinGrasp,true,true);
           buttonThumb.attach(pinThumb,true,true);
           buttonOther.attach(pinOther,true,true);
           break;
@@ -112,7 +112,7 @@ void setup() {
             outOtherOpen=outOtherMin; outOtherClose=outOtherMax;
         }
         buttonCalib.attach(pinCalib,false,true);
-        buttonGrasp.attach(pinGraps,false,true);
+        buttonGrasp.attach(pinGrasp,false,true);
         buttonThumb.attach(pinThumb,false,true);
         buttonOther.attach(pinOther,true,true);
         break;
@@ -194,7 +194,8 @@ void loop() {
  * functions
  */
 int readSensor() {
-  int i, sval;
+  int i;
+  int sval=0;
   for (i = 0; i < 10; i++) {
     sval += analogRead(pinSensor);
   }
