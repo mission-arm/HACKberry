@@ -1,5 +1,5 @@
 ## Translation
-- Translate the tutorial (handbook) from Japanese into English, Spanish, and Catalan.
+- Translate the tutorial (handbook) from Japanese to English, Spanish, and Catalan.
 
 ## Research and exploration
 - Investigate ways to improve the current proposed sensory, electronics, and software components. Ideas:
